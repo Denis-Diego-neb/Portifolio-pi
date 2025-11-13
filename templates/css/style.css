@@ -1,16 +1,14 @@
 body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  color: #BDECB6;
-  background-image: url(../imagens/bgBody.svg);
-  background-color: rgba(0, 0, 0, 0.4);
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  line-height: 1.6;
-  margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    color: #E9F7EF;
+    background-image: url(../imagens/bgBody.svg);
+    background-color: rgba(0, 0, 0, 0.25);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
 }
 
 /* === CONTEÚDO CENTRALIZADO === */
@@ -63,30 +61,40 @@ a, button {
 /* ================================
    INICIO - NAV
 ================================ */
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.35) !important;
+  border-bottom: 1px solid rgba(189, 236, 182, 0.15);
+}
+
 .navbar .nav-link {
-  color: #BDECB6 !important;
-  padding-right: 2vw !important;
   position: relative;
-  transition: color 0.3s ease;
+  color: #E9F7EF !important;
+  padding: 10px 16px !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #BDECB6 !important;
 }
 
 .navbar .nav-link::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 50%;
+  bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #BDECB6;
-  transition: width 0.3s ease;
+  background: #BDECB6;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .navbar .nav-link:hover::after {
-  width: 100%;
-}
-
-.navbar .nav-link:hover {
-  color: #ffffff !important;
+  width: 60%;
 }
 /* ================================
    FIM - NAV
@@ -106,6 +114,7 @@ a, button {
   height: 760px;
   max-width: 1300px;
   margin: 0 auto;
+  margin-top: 40px;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(189, 236, 182, 0.2);
@@ -135,22 +144,26 @@ a, button {
 /* === FIM DIVISOR ENTRE SEÇÕES === */
 
 /* === INICIO SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
-.Trabalhos,
-.Depoimentos {
-  background-color: rgba(26, 26, 26, 0.85);
-  height: 120px;
+.section-title {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 80px 0 50px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  font-weight: 700;
   color: #BDECB6;
-  font-size: 35px;
-  font-weight: 600;
   text-transform: uppercase;
-  border: 1px solid #BDECB6;
-  border-radius: 60px;
-  max-width: 1000px;
-  margin: 60px auto;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.section-title .line {
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #99dca2, #BDECB6, #99dca2);
+  margin: 0 auto;
+  border-radius: 6px;
 }
 /* === FIM SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
 

@@ -19,6 +19,7 @@ main {
   margin: 0 auto;
   padding: 60px 20px;
 }
+/* === FIM CONTEÚDO CENTRALIZADO === */
 
 /* === TÍTULOS === */
 h1 {
@@ -41,12 +42,14 @@ h2 {
   padding-bottom: 6px;
   margin-bottom: 40px;
 }
+/* === FIM TÍTULOS === */
 
 /* === TEXTOS === */
 p {
   font-size: 18px;
   font-weight: 400;
 }
+/* === FIM TEXTOS === */
 
 /* === LINKS E BOTÕES === */
 a, button {
@@ -55,9 +58,10 @@ a, button {
   text-decoration: none;
   color: #BDECB6;
 }
+/* === FIM LINKS E BOTÕES === */
 
 /* ================================
-   NAV
+   INICIO - NAV
 ================================ */
 .navbar .nav-link {
   color: #BDECB6 !important;
@@ -85,10 +89,14 @@ a, button {
   color: #ffffff !important;
 }
 /* ================================
-   HOME
+   FIM - NAV
 ================================ */
 
-/* === CARROSSEL PRINCIPAL === */
+/* ================================
+   INICIO - HOME
+================================ */
+
+/* === INICIO CARROSSEL PRINCIPAL === */
 .carousel {
   margin: 40px 0;
 }
@@ -113,18 +121,20 @@ a, button {
 #carouselExampleIndicators .carousel-item img {
   object-fit: cover;
 }
+/* === FIM CARROSSEL PRINCIPAL === */
 
-/* === DIVISOR ENTRE SEÇÕES === */
+/* === INICIO DIVISOR ENTRE SEÇÕES === */
 .section-divider {
   width: 80%;
   height: 2px;
   background: #BDECB6;
-  opacity: 0.2;
+  opacity: 0.4;
   margin: 60px auto;
   border-radius: 2px;
 }
+/* === FIM DIVISOR ENTRE SEÇÕES === */
 
-/* === SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
+/* === INICIO SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
 .Trabalhos,
 .Depoimentos {
   background-color: rgba(26, 26, 26, 0.85);
@@ -142,8 +152,9 @@ a, button {
   max-width: 1000px;
   margin: 60px auto;
 }
+/* === FIM SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
 
-/* === CARDS === */
+/* === INICIO CARDS === */
 .card {
   background-color: #FDFDFD;
   color: black;
@@ -162,8 +173,9 @@ a, button {
   color: #1A1A1A;
   font-weight: 600;
 }
+/* === FIM CARDS === */
 
-/* === CARROSSEL DEPOIMENTOS === */
+/* === INICIO CARROSSEL DEPOIMENTOS === */
 #carouselExampleInterval {
   width: 100%;
   max-width: 800px;
@@ -179,8 +191,9 @@ a, button {
   height: 100%;
   object-fit: cover;
 }
+/* === FIM CARROSSEL DEPOIMENTOS === */
 
-/* === FOOTER === */
+/* === INICIO FOOTER === */
 footer {
   background-color: #1A1A1A;
   color: #BDECB6;
@@ -222,8 +235,8 @@ footer img {
 .social a img:hover {
   transform: scale(1.1);
 }
-
-/* === RESPONSIVIDADE === */
+/* === FIM FOOTER === */
+/* === INICIO RESPONSIVIDADE === */
 @media (max-width: 990px) {
   .footerDescricao {
     display: none;
@@ -275,3 +288,8 @@ footer img {
     height: 90px;
   }
 }
+/* === FIM RESPONSIVIDADE === */
+
+/* ================================
+   FIM - HOME
+================================ */

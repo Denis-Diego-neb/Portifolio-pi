@@ -1,15 +1,32 @@
 body {
-  font-family: "Poppins", "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   color: #BDECB6;
-  background-color: #1A1A1A;
+  background-image: url(../imagens/bgBody.svg);
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   line-height: 1.6;
+  margin: 0;
+}
+
+/* === CONTEÚDO CENTRALIZADO === */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
 /* === TÍTULOS === */
 h1 {
   font-size: 48px;
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
 }
 
 h2 {
@@ -17,6 +34,12 @@ h2 {
   font-weight: 600;
   text-align: center;
   color: #BDECB6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #BDECB6;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 40px;
 }
 
 /* === TEXTOS === */
@@ -32,27 +55,42 @@ a, button {
   text-decoration: none;
   color: #BDECB6;
 }
+
 /* ================================
-   INÍCIO - NAV
+   NAV
 ================================ */
-.navbar .nav-link{
+.navbar .nav-link {
   color: #BDECB6 !important;
-  padding-right: 2vw!important;
+  padding-right: 2vw !important;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.navbar .container-fluid {
-  padding-left: 15vw;
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #BDECB6;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar .nav-link:hover {
+  color: #ffffff !important;
 }
 /* ================================
-   FIM - NAV
-================================ */
-/* ================================
-   INÍCIO - HOME
+   HOME
 ================================ */
 
 /* === CARROSSEL PRINCIPAL === */
 .carousel {
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 #carouselExampleIndicators {
@@ -61,6 +99,8 @@ a, button {
   max-width: 1300px;
   margin: 0 auto;
   overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(189, 236, 182, 0.2);
 }
 
 #carouselExampleIndicators .carousel-inner,
@@ -74,10 +114,20 @@ a, button {
   object-fit: cover;
 }
 
+/* === DIVISOR ENTRE SEÇÕES === */
+.section-divider {
+  width: 80%;
+  height: 2px;
+  background: #BDECB6;
+  opacity: 0.2;
+  margin: 60px auto;
+  border-radius: 2px;
+}
+
 /* === SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
 .Trabalhos,
 .Depoimentos {
-  background-color: #1A1A1A;
+  background-color: rgba(26, 26, 26, 0.85);
   height: 120px;
   text-align: center;
   display: flex;
@@ -87,29 +137,41 @@ a, button {
   font-size: 35px;
   font-weight: 600;
   text-transform: uppercase;
-  border-top: 1px solid #BDECB6;
-  border-bottom: 1px solid #BDECB6;
+  border: 1px solid #BDECB6;
+  border-radius: 60px;
+  max-width: 1000px;
+  margin: 60px auto;
 }
-/* === FIM - SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
-/* === INICIO - CARDS === */
-.card{
-  background-color: #6C3BA6;
+
+/* === CARDS === */
+.card {
+  background-color: #FDFDFD;
   color: black;
-  margin: 10px auto;
+  margin: 20px auto;
   border-radius: 20px;
+  max-width: 360px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.card h5{
-  color: #BDECB6;
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(189, 236, 182, 0.25);
 }
-/* === FIM - CARDS === */
+
+.card h5 {
+  color: #1A1A1A;
+  font-weight: 600;
+}
+
 /* === CARROSSEL DEPOIMENTOS === */
 #carouselExampleInterval {
   width: 100%;
   max-width: 800px;
   aspect-ratio: 13 / 6;
-  margin: 20px auto;
+  margin: 40px auto;
   overflow: hidden;
   border-radius: 10px;
+  box-shadow: 0 0 20px rgba(189, 236, 182, 0.15);
 }
 
 #carouselExampleInterval .carousel-item img {
@@ -117,7 +179,7 @@ a, button {
   height: 100%;
   object-fit: cover;
 }
-/* === FIM - CARROSSEL DEPOIMENTOS === */
+
 /* === FOOTER === */
 footer {
   background-color: #1A1A1A;
@@ -160,54 +222,50 @@ footer img {
 .social a img:hover {
   transform: scale(1.1);
 }
-/* === FIM - FOOTER === */
+
 /* === RESPONSIVIDADE === */
-@media (max-width: 990px){
-  .footerDescricao{
+@media (max-width: 990px) {
+  .footerDescricao {
     display: none;
   }
 }
+
 @media (max-width: 768px) {
   #carouselExampleIndicators {
     height: 400px;
   }
-  h1 { 
-    font-size: 36px; 
+
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
+
+  .Trabalhos, .Depoimentos {
+    font-size: 26px;
+    height: 100px;
   }
-  h2 { 
-    font-size: 28px; 
+
+  main {
+    padding: 40px 15px;
   }
 }
 
 @media (max-width: 600px) {
-  h1 { 
-    font-size: 32px; 
-  }
-  h2, .Trabalhos, .Depoimentos { 
-    font-size: 24px; 
-  }
-  p, a, button { 
-    font-size: 16px; 
-  }
+  h1 { font-size: 32px; }
+  h2, .Trabalhos, .Depoimentos { font-size: 24px; }
+  p, a, button { font-size: 16px; }
 
   footer {
     flex-direction: column;
     padding: 20px;
   }
-  .card{
-    margin: 5px auto;
-  }
-  footer h1 {
-     font-size: 22px; 
-  }
-  footer p {
-     font-size: 16px;
-  }
-  
 
-  .social {
-     margin-top: 15px; 
+  .card {
+    margin: 10px auto;
   }
+
+  footer h1 { font-size: 22px; }
+  footer p { font-size: 16px; }
+
+  .social { margin-top: 15px; }
 
   #carouselExampleIndicators {
     height: 280px;
@@ -217,4 +275,3 @@ footer img {
     height: 90px;
   }
 }
-/* === FIM - RESPONSIVIDADE === */

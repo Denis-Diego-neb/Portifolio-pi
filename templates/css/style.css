@@ -1,54 +1,148 @@
-/*Inicio formatação Home*/
-/* incio formatação carousel*/
-.carousel{
-    margin-bottom: 10px;
-    margin-top: 10px;
+body {
+  font-family: "Poppins", "Roboto", sans-serif;
+  font-size: 18px;
+  color: #BDECB6;
+  background-color: #1A1A1A;
+  line-height: 1.6;
 }
-/* fim formatação carousel*/
-/* Inicio formatação section Trabalhos*/
-.Trabalhos{
-    background-color:#1A1A1A;
-    height: 120px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    color: #BDECB6;
-    font-size: 35px;
-    align-items: center;
+
+/* === TÍTULOS === */
+h1 {
+  font-size: 48px;
+  font-weight: 700;
 }
-/* Fim formatação section Trabalhos*/
-/* Inicio formatação section Depoimentos*/
-.Depoimentos{
-    background-color:#1A1A1A;
-    height: 120px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    color: #BDECB6;
-    font-size: 35px;
-    align-items: center;
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: #BDECB6;
 }
-/* Fim formtação section Depoimentos*/
-/* Inicio formtação do Footer */
+
+/* === TEXTOS === */
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* === LINKS E BOTÕES === */
+a, button {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #BDECB6;
+}
+/* ================================
+   INÍCIO - NAV
+================================ */
+.navbar .nav-link{
+  color: #BDECB6 !important;
+  padding-right: 2vw!important;
+}
+
+.navbar .container-fluid {
+  padding-left: 15vw;
+}
+/* ================================
+   FIM - NAV
+================================ */
+/* ================================
+   INÍCIO - HOME
+================================ */
+
+/* === CARROSSEL PRINCIPAL === */
+.carousel {
+  margin: 20px 0;
+}
+
+#carouselExampleIndicators {
+  width: 100%;
+  height: 760px;
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#carouselExampleIndicators .carousel-inner,
+#carouselExampleIndicators .carousel-item,
+#carouselExampleIndicators .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+
+#carouselExampleIndicators .carousel-item img {
+  object-fit: cover;
+}
+
+/* === SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
+.Trabalhos,
+.Depoimentos {
+  background-color: #1A1A1A;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #BDECB6;
+  font-size: 35px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-top: 1px solid #BDECB6;
+  border-bottom: 1px solid #BDECB6;
+}
+/* === FIM - SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
+/* === INICIO - CARDS === */
+.card{
+  background-color: #6C3BA6;
+  color: black;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+.card h5{
+  color: #BDECB6;
+}
+/* === FIM - CARDS === */
+/* === CARROSSEL DEPOIMENTOS === */
+#carouselExampleInterval {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 13 / 6;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#carouselExampleInterval .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* === FIM - CARROSSEL DEPOIMENTOS === */
+/* === FOOTER === */
 footer {
   background-color: #1A1A1A;
   color: #BDECB6;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 30px 40px;
   flex-wrap: wrap;
   text-align: center;
+  border-top: 2px solid #BDECB6;
 }
+
 footer h1 {
-    font-size: 30px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
-footer p{
-    font-size: 25px;
-    margin-bottom: 0;
+
+footer p {
+  font-size: 18px;
+  margin-bottom: 5px;
 }
+
 footer img {
-  width: 100px;
+  width: 90px;
   height: auto;
 }
 
@@ -58,19 +152,69 @@ footer img {
 }
 
 .social a img {
-  width: 100px;
+  width: 40px;
   margin: 0 10px;
+  transition: transform 0.2s ease;
 }
 
-/* Responsividade */
+.social a img:hover {
+  transform: scale(1.1);
+}
+/* === FIM - FOOTER === */
+/* === RESPONSIVIDADE === */
+@media (max-width: 990px){
+  .footerDescricao{
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  #carouselExampleIndicators {
+    height: 400px;
+  }
+  h1 { 
+    font-size: 36px; 
+  }
+  h2 { 
+    font-size: 28px; 
+  }
+}
+
 @media (max-width: 600px) {
+  h1 { 
+    font-size: 32px; 
+  }
+  h2, .Trabalhos, .Depoimentos { 
+    font-size: 24px; 
+  }
+  p, a, button { 
+    font-size: 16px; 
+  }
+
   footer {
     flex-direction: column;
+    padding: 20px;
   }
+  .card{
+    margin: 5px auto;
+  }
+  footer h1 {
+     font-size: 22px; 
+  }
+  footer p {
+     font-size: 16px;
+  }
+  
 
   .social {
-    margin-top: 10px;
+     margin-top: 15px; 
+  }
+
+  #carouselExampleIndicators {
+    height: 280px;
+  }
+
+  .Trabalhos, .Depoimentos {
+    height: 90px;
   }
 }
-/* Fim da formatação do Footer */
-/* Fim da formatação da Home */
+/* === FIM - RESPONSIVIDADE === */

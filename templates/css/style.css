@@ -306,3 +306,33 @@ footer img {
 /* ================================
    FIM - HOME
 ================================ */
+
+/* -------- PERSONALIZAÇÃO PAG QUEM SOU ---------- */
+
+#quemsou {
+  margin: 50px;
+  padding: 50px;
+  color: #FDFDFD;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 0px 18px 2px rgba(255, 255, 255, 0.3);
+}
+
+#redes {
+  margin: 50px;
+  padding: 50px;
+  color: #FDFDFD;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 0px 18px 2px rgba(255, 255, 255, 0.3);
+}
+
+#localizacao {
+  margin: 50px;
+  padding: 50px;
+  color: #FDFDFD;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 0px 18px 2px rgba(255, 255, 255, 0.3);
+}

@@ -3,12 +3,17 @@ body {
     font-size: 18px;
     color: #E9F7EF;
     background-image: url(../imagens/bgBody.svg);
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.55);
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin: 0;
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* === CONTEÚDO CENTRALIZADO === */
@@ -62,9 +67,9 @@ a, button {
    INICIO - NAV
 ================================ */
 .navbar {
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.35) !important;
-  border-bottom: 1px solid rgba(189, 236, 182, 0.15);
+  backdrop-filter: blur(14px);
+  background: rgba(0, 0, 0, 0.25) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar .nav-link {
@@ -94,7 +99,11 @@ a, button {
 }
 
 .navbar .nav-link:hover::after {
-  width: 60%;
+  width: 90%;
+  opacity: 1;
+}
+.navbar .nav-link::after {
+  opacity: .6;
 }
 /* ================================
    FIM - NAV
@@ -111,7 +120,8 @@ a, button {
 
 #carouselExampleIndicators {
   width: 100%;
-  height: 760px;
+  height: 60vh;
+  max-height: 760px;
   max-width: 1300px;
   margin: 0 auto;
   margin-top: 40px;
@@ -135,10 +145,10 @@ a, button {
 /* === INICIO DIVISOR ENTRE SEÇÕES === */
 .section-divider {
   width: 80%;
-  height: 2px;
-  background: #BDECB6;
-  opacity: 0.4;
-  margin: 60px auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #BDECB6, transparent);
+  opacity: 0.25;
+  margin: 40px auto;
   border-radius: 2px;
 }
 /* === FIM DIVISOR ENTRE SEÇÕES === */
@@ -146,40 +156,50 @@ a, button {
 /* === INICIO SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
 .section-title {
   text-align: center;
-  margin: 80px 0 50px;
+  margin: 60px 0 40px;
 }
-
+.section-title p {
+  font-size: 22px;
+  font-weight: 500;
+  opacity: .8;
+  letter-spacing: 1px;
+}
 .section-title h2 {
   font-size: 38px;
   font-weight: 700;
   color: #BDECB6;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-bottom: 12px;
+  opacity: .95;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(189,236,182,0.22);
 }
 
 .section-title .line {
-  width: 90px;
-  height: 4px;
-  background: linear-gradient(90deg, #99dca2, #BDECB6, #99dca2);
-  margin: 0 auto;
-  border-radius: 6px;
+  width: 50px;
+  height: 2px;
+  opacity: .6;
 }
 /* === FIM SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
 
 /* === INICIO CARDS === */
 .card {
-  background-color: #FDFDFD;
-  color: black;
-  margin: 20px auto;
-  border-radius: 20px;
-  max-width: 360px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 330px;
+  background-color: #ffffff;
+  color: #1A1A1A;
+  border-radius: 18px;
+  padding-bottom: 12px;
+  transition: .3s ease;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  transition: .25s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(189, 236, 182, 0.25);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
 
 .card h5 {
@@ -189,43 +209,102 @@ a, button {
 /* === FIM CARDS === */
 
 /* === INICIO CARROSSEL DEPOIMENTOS === */
-#carouselExampleInterval {
+
+#carouselDepoimentos {
   width: 100%;
-  max-width: 800px;
-  aspect-ratio: 13 / 6;
+  max-width: 560px;
   margin: 40px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(189, 236, 182, 0.15);
+  overflow: visible !important;
 }
 
-#carouselExampleInterval .carousel-item img {
+.depo-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  text-align: center;
+  width: 90%;
+  margin: auto;
+}
+
+.depo-img {
   width: 100%;
-  height: 100%;
+  border-radius: 14px;
   object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+}
+
+.depo-nome {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Indicadores */
+#carouselDepoimentos .carousel-control-prev {
+  left: -55px;
+}
+
+#carouselDepoimentos .carousel-control-next {
+  right: -55px;
+}
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.2) !important;
+  transition: .3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #6EDC6E !important;
+  width: 26px;
+  border-radius: 40px;
+}
+#carouselDepoimentos .carousel-control-prev,
+#carouselDepoimentos .carousel-control-next {
+  width: 60px;
+}
+
+#carouselDepoimentos .carousel-control-prev-icon,
+#carouselDepoimentos .carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 18px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+  transition: .25s ease-in-out;
+}
+
+/* Hover */
+#carouselDepoimentos .carousel-control-prev-icon:hover,
+#carouselDepoimentos .carousel-control-next-icon:hover {
+  background-color: #BDECB6;
+  transform: scale(1.12);
 }
 /* === FIM CARROSSEL DEPOIMENTOS === */
 
 /* === INICIO FOOTER === */
 footer {
-  background-color: #1A1A1A;
+  background-color: #0f0f0f;
+  border-top: 1px solid rgba(189, 236, 182, 0.2);
   color: #BDECB6;
+  padding: 40px 30px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 40px;
-  flex-wrap: wrap;
-  text-align: center;
-  border-top: 2px solid #BDECB6;
+  flex-direction: column;  
+  align-items: center;        
+  text-align: center;         
+  gap: 20px;                  
 }
 
 footer h1 {
-  font-size: 28px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 footer p {
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 5px;
 }
 
@@ -238,31 +317,50 @@ footer img {
   flex: 1;
   min-width: 200px;
 }
-
+.social{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
 .social a img {
-  width: 40px;
-  margin: 0 10px;
-  transition: transform 0.2s ease;
+  width: 34px;
+  transition: .3s ease;
+  opacity: .85;
 }
 
 .social a img:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  opacity: 1;
 }
 /* === FIM FOOTER === */
 /* === INICIO RESPONSIVIDADE === */
-@media (max-width: 990px) {
-  .footerDescricao {
-    display: none;
-  }
+@media (max-width: 768px) {
+  #carouselDepoimentos .carousel-control-prev {
+  left: -25px; 
 }
 
-@media (max-width: 768px) {
+#carouselDepoimentos .carousel-control-next {
+  right: -25px; 
+}
+  .card{
+    max-width: 100%;
+  }
+  .section-title p {
+    font-size: 24px;
+  }
+  .section-title .line {
+    width: 60px;
+  }
   #carouselExampleIndicators {
     height: 400px;
   }
 
-  h1 { font-size: 36px; }
-  h2 { font-size: 28px; }
+  h1 { 
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px; 
+  }
 
   .Trabalhos, .Depoimentos {
     font-size: 26px;
@@ -275,10 +373,15 @@ footer img {
 }
 
 @media (max-width: 600px) {
-  h1 { font-size: 32px; }
-  h2, .Trabalhos, .Depoimentos { font-size: 24px; }
-  p, a, button { font-size: 16px; }
-
+  h1 { 
+    font-size: 32px; 
+  }
+  h2, .Trabalhos, .Depoimentos { 
+    font-size: 24px; 
+  }
+  p, a, button { 
+    font-size: 16px; 
+  }
   footer {
     flex-direction: column;
     padding: 20px;
@@ -287,16 +390,18 @@ footer img {
   .card {
     margin: 10px auto;
   }
-
-  footer h1 { font-size: 22px; }
-  footer p { font-size: 16px; }
-
-  .social { margin-top: 15px; }
-
+  footer h1 { 
+    font-size: 22px; 
+  }
+  footer p { 
+    font-size: 16px; 
+  }
+  .social { 
+    margin-top: 15px; 
+  }
   #carouselExampleIndicators {
     height: 280px;
   }
-
   .Trabalhos, .Depoimentos {
     height: 90px;
   }

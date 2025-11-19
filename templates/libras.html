@@ -9,18 +9,22 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
-   <!-- FONTE -->
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- FONTE -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <title>Fabiana Jora</title>
+  <!--ICONES-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <title>Libras</title>
 </head>
 
 <body>
- <!-- Barra de navegação -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="imagens/logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -52,8 +56,91 @@
   </nav>
   <!-- Fim da barra de navegação -->
 
+  <!--ÍNICIO DA INTRODUÇÃO-->
+  <section class="container">
+    <section id="libras">
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center"> <!--manter as colunas alinhadas-->
+
+          <div class="col-md-6 d-flex justify-content-center">
+            <img src="imagens/libras/imagemexemplo.jpeg" alt="Fabiana Libras" width="300px" class="img-fluid mx-auto">
+          </div><!--Fim da col-md-6-->
+
+          <div class="col-md-6">
+            <h2 class="text-center">LIBRAS</h2>
+            <h3 class="text-center">Língua Brasileira de Sinais</h3>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat, libero et interdum semper,
+              justo turpis posuere lectus, non venenatis justo lectus accumsan est. Class aptent taciti sociosqu ad
+              litora torquent per conubia nostra, per inceptos himenaeos. In sed suscipit massa. Vivamus turpis nisi,
+              consectetur vitae libero ut, eleifend semper erat. In rutrum feugiat aliquet. </p>
+          </div><!--Fim da col-md-6-->
+
+        </div><!--Fim da row-->
+      </div><!--fim do container-->
+    </section>
+    <!--FIM DA INTRODUÇÃO-->
+
+    <div class="section-divider"></div><!--DIVISOR DE SEÇÃO-->
+
+    <!--SERVIÇOS LIBRAS-->
+    <section id="servicos_libras">
+      <div class="container">
+        <div class="row justify-content-center align-items-center g-4">
+          <!--g-4 é o gap, ou seja, o espaçamento entre as colunas e linhas dentro da row-->
+
+          <div class="col-md-4"><!--col-md-4 dá espaço pra respiração e organização dos cards-->
+
+            <div class="card h-100 position-relative"> <!--h-100 (faz os dois cards ficarem com a mesma altura, mesmo que um tenha mais texto que o outro
+e garanti que o stretched-link tenha área total pra clicar)-->
+              <!--position-relative (O stretched-link precisa de um pai com posição (relative/absolute) para conseguir se esticar.)-->
+
+              <img src="./imagens/libras/imagemteste.jpg" class="card-img-top"
+                alt="Imagem ilustrativa do serviço de interpretação em Libras">
+
+              <div class="card-body">
+                <h5 class="card-title">Intérprete de Libras</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content.</p>
+                <a href="https://wa.me/5519997996102?text=Olá%2C%20Fabiana!%20Gostaria%20de%20saber%20mais%20sobre%20o%20serviço%20de%20interpretação%20de%20Libras%21"
+                  class="stretched-link"></a><!--classe especial chamada stretched-link do Bootstrap -> faz o link “abranger” todo o card.-->
+                <!--O formato correto é sempre: https://wa.me/55DDDNUMERO?text=MENSAGEM - IMPORTANTE: Cada espaço e acentuação precisa ser codificado (URL encoded), senão o link quebra. -->
+                <!--Espaço → %20 | Vírgula → %2C | Acentos → são aceitos no WhatsApp (ele já converte) | ! → %21-->
+              </div><!--Fim div card-body-->
+
+            </div><!--Fim div card-->
+
+          </div><!--Fim div col-md-4-->
+
+          <div class="col-md-4"><!--col-md-4 dá espaço pra respiração e organização dos cards-->
+
+            <div class="card h-100 position-relative">
+              <img src="./imagens/libras/imagemteste.jpg" class="card-img-top"
+                alt="Imagem ilustrativa do curso de Libras">
+
+              <div class="card-body">
+                <h5 class="card-title">Curso de Libras</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content.</p>
+                <a href="https://wa.me/5519997996102?text=Olá%2C%20Fabiana!%20Gostaria%20de%20saber%20mais%20sobre%20o%20curso%20de%20Libras%21"
+                  class="stretched-link"></a><!--classe especial chamada stretched-link do Bootstrap -> faz o link “abranger” todo o card.-->
+                <!--O formato correto é sempre: https://wa.me/55DDDNUMERO?text=MENSAGEM - IMPORTANTE: Cada espaço e acentuação precisa ser codificado (URL encoded), senão o link quebra. -->
+                <!--Espaço → %20 | Vírgula → %2C | Acentos → são aceitos no WhatsApp (ele já converte) | ! → %21-->
+              </div>
+
+            </div><!--Fim div card-->
+
+          </div><!--Fim div col-md-4-->
+
+        </div><!--Fim da row-->
+      </div><!--Fim do cantainer-->
+    </section><!--Fim da seção-->
+    <!--FIM SERVIÇOS LIBRAS-->
+    <div class="section-divider"></div><!--DIVISOR DE SEÇÃO-->
+  </section>
+  <!-- Incio do footer -->
   <footer>
-    <img src="imagens/logo.svg" alt="Logo do site">
+    <img src="./imagens/logo.svg" alt="Logo do site">
 
     <div class="footerDescricao">
       <h1>ESPAÇO FABIANA JORA</h1>
@@ -62,12 +149,17 @@
     </div>
 
     <div class="social">
-      <a href="#"><img src="imagens/facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="imagens/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="imagens/whatsapp.svg" alt="LinkedIn"></a>
+      <a href="https://www.facebook.com/share/1HDk7JhV62/" class="footer-icon"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/fabianajora/" class="footer-icon"><i class="bi bi-instagram"></i></a>
+      <a href="https://wa.me/5519997996102?text=Olá%2C%20Fabiana!%20Gostaria%20de%20saber%20mais%20informações."
+        class="footer-icon"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://youtube.com/@fabianajora5293?si=NsKzGLF2Lct7K5ut" class="footer-icon"><i
+          class="bi bi-youtube"></i></a>
     </div>
   </footer>
   <!-- Fim do footer -->
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>

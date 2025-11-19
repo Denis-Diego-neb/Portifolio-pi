@@ -15,16 +15,18 @@
   <!-- FONTE -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!--ICONES-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
   <title>Quem sou</title>
 </head>
 
 <body>
   <!-- Barra de navegação -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="./imagens/logo.svg" alt="" width="30" height="24"
-          class="d-inline-block align-text-top">
+        <img src="imagens/logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +34,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="quemsou.html">Quem sou</a>
           </li>
@@ -51,97 +56,122 @@
   <!-- Fim da barra de navegação -->
 
   <!--INÍCIO SEÇÃO QUEM SOU-->
+  <section class="container">
+    <section id="quemsou">
+      <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
 
-  <section id="quemsou">
-    <div class="container">
-      <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6 d-flex justify-content-center">
+            <img src="./imagens/quemsou/imagemexemplo.jpeg" alt="Fabiana Jora" width="300px" class="img-fluid mx-auto">
+          </div><!--Fim da col-md-6 IMAGEM-->
 
-        <div class="col-md-6 d-flex justify-content-center">
-          <img src="imagens/quemsou/imagemexemplo.jpeg" alt="Fabiana Jora"  width="300px" class="img-fluid mx-auto">
-        </div><!--Fim da col-md-6 IMAGEM-->
+          <div class="col-md-6">
+            <h2>FABIANA JORA</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat, libero et interdum semper,
+              justo turpis posuere lectus, non venenatis justo lectus accumsan est. Class aptent taciti sociosqu ad
+              litora torquent per conubia nostra, per inceptos himenaeos. In sed suscipit massa. Vivamus turpis nisi,
+              consectetur vitae libero ut, eleifend semper erat. In rutrum feugiat aliquet. </p>
+          </div><!--Fim col-md-6 TEXTO-->
 
-        <div class="col-md-6">
-          <h2>FABIANA JORA</h2>
-          <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris placerat, libero et interdum semper, justo turpis posuere lectus, non venenatis justo lectus accumsan est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In sed suscipit massa. Vivamus turpis nisi, consectetur vitae libero ut, eleifend semper erat. In rutrum feugiat aliquet. </p>
-        </div><!--Fim col-md-6 TEXTO-->
+        </div> <!--Fim do row-->
+      </div><!--fim da container-->
+    </section>
 
-      </div> <!--Fim do row-->
-    </div><!--fim da container-->
-  </section>
+    <!--FIM DA SEÇÃO QUEM SOU-->
 
-  <!--FIM DA SEÇÃO QUEM SOU-->
+    <div class="section-divider"></div> <!--DIVISOR DE SEÇÕES-->
 
-  <div class="section-divider"></div> <!--DIVISOR DE SEÇÕES-->
+    <!--INÍCIO DA SEÇÃO REDES SOCIAIS-->
 
-  <!--INÍCIO DA SEÇÃO REDES SOCIAIS-->
+    <section id="redes">
+      <div class="container">
 
-  <section id="redes">
-    <div class="container">
-      <div class="row">
-        
-        <h2>Redes Sociais</h2>
+        <div class="row text-center mb-4">
+          <h2>Contatos</h2>
+          <!-- Chamada de apoio -->
+          <p class="contato-subtitulo">Escolha a melhor forma de entrar em contato:</p>
+        </div><!--Fim row mb-4-->
 
-        <div class="col-md-4 text-center">
-          <a href="https://www.instagram.com/fabianajora/">
-            <img src="imagens/instagram.svg" alt="icone instagram" width="100px" class="img-fluid">
-          </a>
-        </div><!--Fim da col-md-4-->
+        <div class="row d-flex justify-content-center align-items-center text-center">
 
-        <div class="col-md-4 text-center">
-          <a href="">
-            <img src="imagens/facebook.svg" alt="icone facebook" width="100px" class="img-fluid">
-          </a>
-        </div><!--Fim da col-md-4-->
+          <!--Coluna ICONES-->
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="social-icon d-flex gap-4">
 
-        <div class="col-md-4 text-center">
-          <a href="">
-            <img src="imagens/whatsapp.svg" alt="icone whatsapp" width="100px" class="img-fluid">
-          </a>
-        </div><!--Fim da col-md-4-->
+              <!--instagram-->
+              <a href="https://www.instagram.com/fabianajora/" target="_blank" class="fs-1 social-icon">
+                <i class="bi bi-instagram"></i>
+              </a>
 
+              <!--facebook-->
+              <a href="https://www.facebook.com/share/1HDk7JhV62/" class="fs-1 social-icon">
+                <i class="bi bi-facebook"></i>
+              </a>
 
-      </div><!--Fim da row-->
-    </div><!--fim do container-->
-  </section>
+              <!--youtube-->
+              <a href="https://youtube.com/@fabianajora5293?si=NsKzGLF2Lct7K5ut" class="fs-1 social-icon">
+                <i class="bi bi-youtube"></i>
+              </a>
 
-  <!--FIM DA SEÇÃO REDES SOCIAIS-->
+            </div><!--fim div social-icon-->
+          </div><!--Fim da Coluna ICONES-->
 
-  <div class="section-divider"></div> <!--DIVISOR DE SEÇÕES-->  
+          <!-- COLUNA DOS BOTÕES -->
+          <div class="col-md-4 d-flex flex-column align-items-center gap-3">
 
-  <!--INÍCIO DA SEÇÃO LOCALIZAÇÃO-->
+            <!-- Botão WhatsApp -->
+            <a href="https://wa.me/5519997996102?text=Olá%2C%20Fabiana!%20Gostaria%20de%20saber%20mais%20informações."
+              target="_blank" class="btn-contato btn-whatsapp">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
 
-  <section id="localizacao">
-    <div class="container">
-      <div class="row">
-        <div class="Col-md-8">
+            <!-- Botão de ligação -->
+            <a href="tel:19997996102" class="btn-contato btn-ligar">
+              <i class="bi bi-telephone"></i> Ligar
+            </a>
 
-          <h2>Localização</h2>
-          <br>
-          <div class="ratio ratio-16x9" style="max-width: 800px; margin: 0 auto;"> <!--faz o mapa se ajustar automaticamente ao tamanho da tela (mantendo proporção 16:9).-->
-              
+          </div><!--Fim coluna dos Botões-->
+
+        </div><!--Fim da row-->
+      </div><!--fim do container-->
+    </section><!--Fim da seção redes-->
+    <!--FIM DA SEÇÃO REDES SOCIAIS-->
+
+    <div class="section-divider"></div> <!--DIVISOR DE SEÇÕES-->
+
+    <!--INÍCIO DA SEÇÃO LOCALIZAÇÃO-->
+
+    <section id="localizacao">
+      <div class="container">
+        <div class="row">
+          <div class="Col-md-8">
+
+            <h2>Localização</h2>
+            <br>
+            <div class="ratio ratio-16x9" style="max-width: 800px; margin: 0 auto;">
+              <!--faz o mapa se ajustar automaticamente ao tamanho da tela (mantendo proporção 16:9).-->
+
               <!--iframe: é o elemento que realmente exibe o mapa-->
               <!--loading="lazy": ajuda a página a carregar mais rápido, só exibindo o mapa quando ele aparece na tela.-->
-              
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.072337547389!2d-47.38242402576471!3d-22.35089731823882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8772f9c95d3f1%3A0xa489b9c1dec8ccd5!2sR.%20Conchal%2C%2057%20-%20Jardim%20Rollo%2C%20Araras%20-%20SP%2C%2013600-390!5e0!3m2!1spt-BR!2sbr!4v1763057532766!5m2!1spt-BR!2sbr" 
-              style="border: 0;" 
-              allowfullscreen="" loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-              
-          </div> <!--Fim da div ratio-->
-          
 
-        </div><!--Fim da Col-md-8-->
-      </div><!--Fim da row-->
-    </div><!--fim do container-->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.072337547389!2d-47.38242402576471!3d-22.35089731823882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8772f9c95d3f1%3A0xa489b9c1dec8ccd5!2sR.%20Conchal%2C%2057%20-%20Jardim%20Rollo%2C%20Araras%20-%20SP%2C%2013600-390!5e0!3m2!1spt-BR!2sbr!4v1763057532766!5m2!1spt-BR!2sbr"
+                style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+
+            </div> <!--Fim da div ratio-->
+
+
+          </div><!--Fim da Col-md-8-->
+        </div><!--Fim da row-->
+      </div><!--fim do container-->
+    </section>
   </section>
-
   <!--FIM DA SEÇÃO LOCALIZAÇÃO-->
 
 
-   <!-- Incio do footer -->
+  <!-- Incio do footer -->
   <footer>
     <img src="./imagens/logo.svg" alt="Logo do site">
 
@@ -152,9 +182,12 @@
     </div>
 
     <div class="social">
-      <a href="#"><img src="./imagens/facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="./imagens/instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="./imagens/whatsapp.svg" alt="WhatsApp"></a>
+      <a href="https://www.facebook.com/share/1HDk7JhV62/" class="footer-icon"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/fabianajora/" class="footer-icon"><i class="bi bi-instagram"></i></a>
+      <a href="https://wa.me/5519997996102?text=Olá%2C%20Fabiana!%20Gostaria%20de%20saber%20mais%20informações."
+        class="footer-icon"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://youtube.com/@fabianajora5293?si=NsKzGLF2Lct7K5ut" class="footer-icon"><i
+          class="bi bi-youtube"></i></a>
     </div>
   </footer>
   <!-- Fim do footer -->

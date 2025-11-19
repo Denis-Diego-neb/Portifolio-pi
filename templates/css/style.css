@@ -1,338 +1,545 @@
 body {
-    font-family: "Montserrat", sans-serif;
-    font-size: 18px;
-    color: #E9F7EF;
-    background-image: url(../imagens/bgBody.svg);
-    background-color: rgba(0, 0, 0, 0.25);
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  color: #E9F7EF;
+  background-image: url(../imagens/bgBody.svg);
+  background-color: rgba(0, 0, 0, 0.55);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* === CONTEÚDO CENTRALIZADO === */
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 20px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 60px 20px;
 }
 /* === FIM CONTEÚDO CENTRALIZADO === */
 
 /* === TÍTULOS === */
 h1 {
-  font-size: 48px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+font-size: 48px;
+font-weight: 700;
+text-align: center;
+margin-bottom: 40px;
+letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 32px;
-  font-weight: 600;
-  text-align: center;
-  color: #BDECB6;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #BDECB6;
-  display: inline-block;
-  padding-bottom: 6px;
-  margin-bottom: 40px;
+font-size: 32px;
+font-weight: 600;
+text-align: center;
+color: #BDECB6;
+text-transform: uppercase;
+letter-spacing: 1px;
+border-bottom: 2px solid #BDECB6;
+display: inline-block;
+padding-bottom: 6px;
+margin-bottom: 40px;
 }
 /* === FIM TÍTULOS === */
 
 /* === TEXTOS === */
 p {
-  font-size: 18px;
-  font-weight: 400;
+font-size: 18px;
+font-weight: 400;
 }
 /* === FIM TEXTOS === */
 
 /* === LINKS E BOTÕES === */
 a, button {
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #BDECB6;
+font-size: 18px;
+font-weight: 600;
+text-decoration: none;
+color: #BDECB6;
 }
 /* === FIM LINKS E BOTÕES === */
 
 /* ================================
-   INICIO - NAV
+ INICIO - NAV
 ================================ */
 .navbar {
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.35) !important;
-  border-bottom: 1px solid rgba(189, 236, 182, 0.15);
+backdrop-filter: blur(14px);
+background: rgba(0, 0, 0, 0.25) !important;
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar .nav-link {
-  position: relative;
-  color: #E9F7EF !important;
-  padding: 10px 16px !important;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: color 0.3s;
+position: relative;
+color: #E9F7EF !important;
+padding: 10px 16px !important;
+font-weight: 500;
+letter-spacing: 0.5px;
+transition: color 0.3s;
 }
 
 .navbar .nav-link:hover {
-  color: #BDECB6 !important;
+color: #BDECB6 !important;
 }
 
 .navbar .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: #BDECB6;
-  border-radius: 10px;
-  transition: 0.3s ease;
-  transform: translateX(-50%);
+content: "";
+position: absolute;
+left: 50%;
+bottom: -4px;
+width: 0%;
+height: 2px;
+background: #BDECB6;
+border-radius: 10px;
+transition: 0.3s ease;
+transform: translateX(-50%);
 }
 
 .navbar .nav-link:hover::after {
-  width: 60%;
+width: 90%;
+opacity: 1;
+}
+.navbar .nav-link::after {
+opacity: .6;
 }
 /* ================================
-   FIM - NAV
+ FIM - NAV
 ================================ */
 
 /* ================================
-   INICIO - HOME
+ INICIO - HOME
 ================================ */
 
 /* === INICIO CARROSSEL PRINCIPAL === */
 .carousel {
-  margin: 40px 0;
+margin: 40px 0;
 }
 
 #carouselExampleIndicators {
-  width: 100%;
-  height: 760px;
-  max-width: 1300px;
-  margin: 0 auto;
-  margin-top: 40px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(189, 236, 182, 0.2);
+width: 100%;
+height: 60vh;
+max-height: 760px;
+max-width: 1300px;
+margin: 0 auto;
+margin-top: 40px;
+overflow: hidden;
+border-radius: 12px;
+box-shadow: 0 0 20px rgba(189, 236, 182, 0.2);
 }
 
 #carouselExampleIndicators .carousel-inner,
 #carouselExampleIndicators .carousel-item,
 #carouselExampleIndicators .carousel-item img {
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
 }
 
 #carouselExampleIndicators .carousel-item img {
-  object-fit: cover;
+object-fit: cover;
 }
 /* === FIM CARROSSEL PRINCIPAL === */
 
 /* === INICIO DIVISOR ENTRE SEÇÕES === */
 .section-divider {
-  width: 80%;
-  height: 2px;
-  background: #BDECB6;
-  opacity: 0.4;
-  margin: 60px auto;
-  border-radius: 2px;
+width: 80%;
+height: 1px;
+background: linear-gradient(90deg, transparent, #BDECB6, transparent);
+opacity: 0.25;
+margin: 40px auto;
+border-radius: 2px;
 }
 /* === FIM DIVISOR ENTRE SEÇÕES === */
 
 /* === INICIO SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
 .section-title {
-  text-align: center;
-  margin: 80px 0 50px;
+text-align: center;
+margin: 60px 0 40px;
 }
-
+.section-title p {
+font-size: 22px;
+font-weight: 500;
+opacity: .8;
+letter-spacing: 1px;
+}
 .section-title h2 {
-  font-size: 38px;
-  font-weight: 700;
-  color: #BDECB6;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
+font-size: 38px;
+font-weight: 700;
+color: #BDECB6;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 12px;
+opacity: .95;
+font-weight: 700;
+text-shadow: 0 0 8px rgba(189,236,182,0.22);
 }
 
 .section-title .line {
-  width: 90px;
-  height: 4px;
-  background: linear-gradient(90deg, #99dca2, #BDECB6, #99dca2);
-  margin: 0 auto;
-  border-radius: 6px;
+width: 50px;
+height: 2px;
+opacity: .6;
 }
 /* === FIM SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
 
 /* === INICIO CARDS === */
 .card {
-  background-color: #FDFDFD;
-  color: black;
-  margin: 20px auto;
-  border-radius: 20px;
-  max-width: 360px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+width: 100%;
+max-width: 330px;
+background-color: #ffffff;
+color: #1A1A1A;
+border-radius: 18px;
+padding-bottom: 12px;
+transition: .3s ease;
+border: 1px solid rgba(255,255,255,0.07);
+box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+transition: .25s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(189, 236, 182, 0.25);
+transform: translateY(-4px);
+box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
 
 .card h5 {
-  color: #1A1A1A;
-  font-weight: 600;
+color: #1A1A1A;
+font-weight: 600;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: block;
 }
 /* === FIM CARDS === */
 
 /* === INICIO CARROSSEL DEPOIMENTOS === */
-#carouselExampleInterval {
-  width: 100%;
-  max-width: 800px;
-  aspect-ratio: 13 / 6;
-  margin: 40px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(189, 236, 182, 0.15);
+
+#carouselDepoimentos {
+width: 100%;
+max-width: 560px;
+margin: 40px auto;
+overflow: visible !important;
 }
 
-#carouselExampleInterval .carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.depo-card {
+background: #fff;
+padding: 18px;
+border-radius: 18px;
+box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+text-align: center;
+width: 90%;
+margin: auto;
+}
+
+.depo-img {
+width: 100%;
+border-radius: 14px;
+object-fit: cover;
+box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+}
+
+.depo-nome {
+margin-top: 12px;
+font-size: 16px;
+font-weight: 600;
+color: #333;
+}
+
+/* Indicadores */
+#carouselDepoimentos .carousel-control-prev {
+left: -55px;
+}
+
+#carouselDepoimentos .carousel-control-next {
+right: -55px;
+}
+.carousel-indicators button {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: rgba(0,0,0,0.2) !important;
+transition: .3s ease;
+}
+
+.carousel-indicators .active {
+background-color: #6EDC6E !important;
+width: 26px;
+border-radius: 40px;
+}
+#carouselDepoimentos .carousel-control-prev,
+#carouselDepoimentos .carousel-control-next {
+width: 60px;
+}
+
+#carouselDepoimentos .carousel-control-prev-icon,
+#carouselDepoimentos .carousel-control-next-icon {
+background-color: rgba(255, 255, 255, 0.7);
+border-radius: 50%;
+padding: 18px;
+backdrop-filter: blur(5px);
+box-shadow: 0 0 15px rgba(0,0,0,0.25);
+transition: .25s ease-in-out;
+}
+
+/* Hover */
+#carouselDepoimentos .carousel-control-prev-icon:hover,
+#carouselDepoimentos .carousel-control-next-icon:hover {
+background-color: #BDECB6;
+transform: scale(1.12);
 }
 /* === FIM CARROSSEL DEPOIMENTOS === */
 
 /* === INICIO FOOTER === */
 footer {
-  background-color: #1A1A1A;
-  color: #BDECB6;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 40px;
-  flex-wrap: wrap;
-  text-align: center;
-  border-top: 2px solid #BDECB6;
+background-color: #0f0f0f;
+border-top: 1px solid rgba(189, 236, 182, 0.2);
+color: #BDECB6;
+padding: 40px 30px;
+display: flex;
+flex-direction: column;  
+align-items: center;        
+text-align: center;         
+gap: 20px;                  
 }
 
 footer h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+font-size: 20px;
+margin-bottom: 10px;
 }
 
 footer p {
-  font-size: 18px;
-  margin-bottom: 5px;
+font-size: 14px;
+margin-bottom: 5px;
 }
 
 footer img {
-  width: 90px;
-  height: auto;
+width: 90px;
+height: auto;
 }
 
 .footerDescricao {
-  flex: 1;
-  min-width: 200px;
+flex: 1;
+min-width: 200px;
 }
-
+.social{
+display: flex;
+gap: 15px;
+justify-content: center;
+}
 .social a img {
-  width: 40px;
-  margin: 0 10px;
-  transition: transform 0.2s ease;
+width: 34px;
+transition: .3s ease;
+opacity: .85;
 }
 
 .social a img:hover {
-  transform: scale(1.1);
+transform: scale(1.15);
+opacity: 1;
 }
 /* === FIM FOOTER === */
 /* === INICIO RESPONSIVIDADE === */
-@media (max-width: 990px) {
-  .footerDescricao {
-    display: none;
-  }
-}
 
 @media (max-width: 768px) {
-  #carouselExampleIndicators {
-    height: 400px;
-  }
+.card {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+gap: 12px;
+}
 
-  h1 { font-size: 36px; }
-  h2 { font-size: 28px; }
+.card img {
+width: 40%;
+height: auto;
+object-fit: cover;
+border-radius: 10px;
+}
 
-  .Trabalhos, .Depoimentos {
-    font-size: 26px;
-    height: 100px;
-  }
+.card-body {
+padding: 0;
+}
+.card-title {
+font-size: 1.1rem;
+margin-bottom: 5px;
+text-align: center;
+}
 
-  main {
-    padding: 40px 15px;
-  }
+.card-text {
+font-size: 0.9rem;
+line-height: 1.3;
+}
+#apresentacao h2 {
+text-align: center;
+font-size: 28px;
+margin-top: 20px;
+margin-bottom: 20px; 
+}
+
+#apresentacao p {
+text-align: center;
+font-size: 16px;
+}
+
+#apresentacao .row {
+text-align: center; 
+align-items: flex-start !important; 
+}
+#carouselDepoimentos .carousel-control-prev {
+left: -25px; 
+}
+
+#carouselDepoimentos .carousel-control-next {
+right: -25px; 
+}
+.card{
+  max-width: 100%;
+}
+.section-title p {
+  font-size: 24px;
+}
+.section-title .line {
+  width: 60px;
+}
+#carouselExampleIndicators {
+  height: 400px;
+}
+
+h1 { 
+  font-size: 36px;
+}
+h2 {
+  font-size: 28px; 
+}
+
+.Trabalhos, .Depoimentos {
+  font-size: 26px;
+  height: 100px;
+}
+
+main {
+  padding: 40px 15px;
+}
 }
 
 @media (max-width: 600px) {
-  h1 { font-size: 32px; }
-  h2, .Trabalhos, .Depoimentos { font-size: 24px; }
-  p, a, button { font-size: 16px; }
+h1 { 
+  font-size: 32px; 
+}
+h2, .Trabalhos, .Depoimentos { 
+  font-size: 24px; 
+}
+p, a, button { 
+  font-size: 16px; 
+}
+footer {
+  flex-direction: column;
+  padding: 20px;
+}
 
-  footer {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .card {
-    margin: 10px auto;
-  }
-
-  footer h1 { font-size: 22px; }
-  footer p { font-size: 16px; }
-
-  .social { margin-top: 15px; }
-
-  #carouselExampleIndicators {
-    height: 280px;
-  }
-
-  .Trabalhos, .Depoimentos {
-    height: 90px;
-  }
+.card {
+  margin: 10px auto;
+}
+footer h1 { 
+  font-size: 22px; 
+}
+footer p { 
+  font-size: 16px; 
+}
+.social { 
+  margin-top: 15px; 
+}
+#carouselExampleIndicators {
+  height: 280px;
+}
+.Trabalhos, .Depoimentos {
+  height: 90px;
+}
 }
 /* === FIM RESPONSIVIDADE === */
 
 /* ================================
-   FIM - HOME
+ FIM - HOME
 ================================ */
 
 /* -------- PERSONALIZAÇÃO PAG QUEM SOU ---------- */
 
 #quemsou {
-  margin: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0px 0px 18px 2px rgba(255, 255, 255, 0.3);
+margin: 50px;
+padding: 50px;
+color: #FDFDFD;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+box-shadow: 0px 0px 18px 2px rgba(255, 255, 255, 0.3);
 }
 
 #redes {
-  margin: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0px 0px 18px 2px rgba(255, 255, 255, 0.3);
+margin: 50px;
+padding: 50px;
+color: #FDFDFD;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+box-shadow: 0px 0px 18px 2px rgba(255, 255, 255, 0.3);
 }
 
 #localizacao {
-  margin: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  box-shadow: 0px 0px 18px 2px rgba(255, 255, 255, 0.3);
+margin: 50px;
+padding: 50px;
+color: #FDFDFD;
+text-align: center;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 10px;
+box-shadow: 0px 0px 18px 2px rgba(255, 255, 255, 0.3);
 }
+/* ================================
+ INICIO - MASSOTERAPIA
+================================ */
+
+/* INICIO APRESENTAÇÃO */
+.h2Servicos{
+text-align: center;
+}
+#apresentacao .container{
+background: rgba(255,255,255,0.06);
+padding: 40px;
+border-radius: 20px;
+backdrop-filter: blur(6px);
+margin-top: 40px;
+}
+.servicos h2, #apresentacao h2 {
+font-size: 38px;
+font-weight: 700;
+color: #BDECB6;
+text-transform: uppercase;
+letter-spacing: 1px;
+border-bottom: 2px solid #BDECB6;
+padding-bottom: 10px;
+margin-bottom: 40px;
+text-shadow: 0 0 8px rgba(189,236,182,0.22);
+}
+#apresentacao img{
+margin-bottom: 20px;
+}
+.card-link {
+text-decoration: none;
+color: inherit;
+display: block;
+}
+
+.servico-card {
+transition: transform .3s ease, box-shadow .3s ease;
+cursor: pointer;
+}
+
+.servico-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+/* FIM APRESENTAÇÃO */
+
+/* ================================
+ FIM - MASSOTERAPIA
+================================ */

@@ -140,7 +140,7 @@ font-weight: 400;
 
 /* === LINKS E BOTÕES === */
 a, button {
-font-size: 18px;
+font-size: 16px;
 font-weight: 600;
 text-decoration: none;
 color: #BDECB6;
@@ -178,6 +178,7 @@ padding: 10px 16px !important;
 font-weight: 500;
 letter-spacing: 0.5px;
 transition: color 0.3s;
+
 }
 
 .navbar .nav-link:hover {
@@ -203,6 +204,12 @@ opacity: 1;
 }
 .navbar .nav-link::after {
 opacity: .6;
+}
+/*-- FORMATAÇÃO PARA JAVASCRIPT --*/
+.nav-solid {
+  background: rgba(0,0,0,0.82) !important;
+  backdrop-filter: blur(12px);
+/*-- FIM - FORMATAÇÃO PARA JAVASCRIPT --*/
 }
 /* ================================
  FIM - NAV
@@ -237,7 +244,7 @@ box-shadow: 0 0 15px rgba(0,0,0,0.25);
 transition: .25s ease-in-out;
 }
 #carouselExampleIndicators .carousel-control-next-icon:hover, .carousel-control-prev-icon:hover{
-  background-color: #BDECB6;
+  background-color: #7b1fd1;
 transform: scale(1.12);
 }
 #carouselExampleIndicators .carousel-inner,
@@ -375,7 +382,7 @@ transition: .3s ease;
 }
 
 .carousel-indicators .active {
-background-color: #6EDC6E !important;
+background-color: #7b1fd1 !important;
 width: 26px;
 border-radius: 40px;
 }
@@ -396,7 +403,7 @@ transition: .25s ease-in-out;
 
 #carouselDepoimentos .carousel-control-prev-icon:hover,
 #carouselDepoimentos .carousel-control-next-icon:hover {
-background-color: #BDECB6;
+background-color: #7b1fd1;
 transform: scale(1.12);
 }
 /* === FIM CARROSSEL DEPOIMENTOS === */
@@ -473,6 +480,7 @@ flex-direction: row;
 align-items: center;
 padding: 10px;
 gap: 12px;
+max-width: 100%;
 }
 
 .card img {
@@ -518,9 +526,6 @@ left: -25px;
 #carouselDepoimentos .carousel-control-next {
 right: -25px; 
 }
-.card{
-  max-width: 100%;
-}
 .section-title p {
   font-size: 24px;
 }
@@ -541,10 +546,6 @@ h2 {
 .Trabalhos, .Depoimentos {
   font-size: 26px;
   height: 100px;
-}
-
-main {
-  padding: 40px 15px;
 }
 }
 

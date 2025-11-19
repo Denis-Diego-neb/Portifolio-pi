@@ -129,7 +129,18 @@ overflow: hidden;
 border-radius: 12px;
 box-shadow: 0 0 20px rgba(189, 236, 182, 0.2);
 }
-
+#carouselExampleIndicators .carousel-control-next-icon, .carousel-control-prev-icon{
+  background-color: rgba(255, 255, 255, 0.7);
+border-radius: 50%;
+padding: 18px;
+backdrop-filter: blur(5px);
+box-shadow: 0 0 15px rgba(0,0,0,0.25);
+transition: .25s ease-in-out;
+}
+#carouselExampleIndicators .carousel-control-next-icon:hover, .carousel-control-prev-icon:hover{
+  background-color: #BDECB6;
+transform: scale(1.12);
+}
 #carouselExampleIndicators .carousel-inner,
 #carouselExampleIndicators .carousel-item,
 #carouselExampleIndicators .carousel-item img {
@@ -249,7 +260,6 @@ font-weight: 600;
 color: #333;
 }
 
-/* Indicadores */
 #carouselDepoimentos .carousel-control-prev {
 left: -55px;
 }
@@ -285,7 +295,6 @@ box-shadow: 0 0 15px rgba(0,0,0,0.25);
 transition: .25s ease-in-out;
 }
 
-/* Hover */
 #carouselDepoimentos .carousel-control-prev-icon:hover,
 #carouselDepoimentos .carousel-control-next-icon:hover {
 background-color: #BDECB6;

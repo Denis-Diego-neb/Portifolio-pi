@@ -320,7 +320,7 @@ box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
 
 .card h5 {
-color: #1A1A1A;
+color: #6C3BA6;
 font-weight: 600;
 }
 .card img {
@@ -597,7 +597,7 @@ footer p {
 
 @media (max-width: 768px) {
   h1 { font-size: 36px; }
-  h2 { font-size: 28px; margin-bottom: 30px; }
+  h2 { font-size: 28px; margin-bottom: 30px; margin-top: 30px; }
   h3 { font-size: 24px; }
   h4 { font-size: 20px; }
   p  { font-size: 16px; }
@@ -605,7 +605,7 @@ footer p {
 
 @media (max-width: 480px) {
   h1 { font-size: 32px; }
-  h2 { font-size: 24px; padding-bottom: 6px; }
+  h2 { font-size: 12px; padding-bottom: 6px;padding-top: 10px; }
   h3 { font-size: 22px; }
   p  { font-size: 15px; }
 }

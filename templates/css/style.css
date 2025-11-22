@@ -290,6 +290,7 @@ opacity: .6;
 /* === INICIO CARDS === */
 .card {
 width: 100%;
+height: 100%; 
 max-width: 330px;
 background-color: #ffffff;
 color: #1A1A1A;
@@ -635,6 +636,10 @@ footer p {
   backdrop-filter: blur(4px);
 }
 
+#quemsou img{
+  border-radius: 05px;
+}
+
 /* SEÇÃO REDES(CONTATOS) */
 #redes {
   margin-top: 50px;
@@ -801,6 +806,10 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   backdrop-filter: blur(4px);
 }
 
+#libras img{
+  border-radius: 05px;
+}
+
 #servicos_libras{
   margin-top: 50px;
   padding: 50px;
@@ -834,4 +843,8 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   backdrop-filter: blur(4px);
+}
+
+#enfermagem img{
+  border-radius: 5px;
 }

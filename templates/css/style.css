@@ -220,42 +220,29 @@ opacity: .6;
 ================================ */
 
 /* === INICIO CARROSSEL PRINCIPAL === */
-.carousel {
-margin: 40px 0;
+
+
+.carousel-container {
+  max-width: 900px;
+  margin: auto;
 }
 
-#carouselExampleIndicators {
-width: 100%;
-height: 60vh;
-max-height: 760px;
-max-width: 1300px;
-margin: 0 auto;
-margin-top: 40px;
-overflow: hidden;
-border-radius: 12px;
-box-shadow: 0 0 20px rgba(189, 236, 182, 0.2);
-}
-#carouselExampleIndicators .carousel-control-next-icon, .carousel-control-prev-icon{
-  background-color: rgba(255, 255, 255, 0.7);
-border-radius: 50%;
-padding: 18px;
-backdrop-filter: blur(5px);
-box-shadow: 0 0 15px rgba(0,0,0,0.25);
-transition: .25s ease-in-out;
-}
-#carouselExampleIndicators .carousel-control-next-icon:hover, .carousel-control-prev-icon:hover{
-  background-color: #7b1fd1;
-transform: scale(1.12);
-}
-#carouselExampleIndicators .carousel-inner,
-#carouselExampleIndicators .carousel-item,
-#carouselExampleIndicators .carousel-item img {
-width: 100%;
-height: 100%;
+.carousel-img {
+  border-radius: 20px;
+  transition: .4s ease-in-out;
 }
 
-#carouselExampleIndicators .carousel-item img {
-object-fit: cover;
+.main-img {
+  width: 450px;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+.blur-img {
+  width: 250px;
+  filter: blur(4px);
+  transform: scale(0.9);
+  opacity: 1;
 }
 /* === FIM CARROSSEL PRINCIPAL === */
 
@@ -390,19 +377,39 @@ border-radius: 40px;
 #carouselDepoimentos .carousel-control-next {
 width: 60px;
 }
-
+#carouselDepoimentos .carousel-control-prev,
+#carouselDepoimentos .carousel-control-next,
+#multiCarousel .carousel-control-prev,
+#multiCarousel .carousel-control-next {
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10;
+  width: 60px !important;   /* mesmo tamanho do depoimentos */
+  height: 60px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
 #carouselDepoimentos .carousel-control-prev-icon,
-#carouselDepoimentos .carousel-control-next-icon {
+#carouselDepoimentos .carousel-control-next-icon,
+#multiCarousel .carousel-control-prev-icon,
+#multiCarousel .carousel-control-next-icon  {
 background-color: rgba(255, 255, 255, 0.7);
 border-radius: 50%;
 padding: 18px;
 backdrop-filter: blur(5px);
 box-shadow: 0 0 15px rgba(0,0,0,0.25);
 transition: .25s ease-in-out;
+  width: 40px;
+  height: 40px;
 }
 
 #carouselDepoimentos .carousel-control-prev-icon:hover,
-#carouselDepoimentos .carousel-control-next-icon:hover {
+#carouselDepoimentos .carousel-control-next-icon:hover,
+#multiCarousel .carousel-control-prev-icon:hover,
+#multiCarousel .carousel-control-next-icon:hover {
 background-color: #7b1fd1;
 transform: scale(1.12);
 }
@@ -798,4 +805,3 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 .card-text {
   color: #6C3BA6;
 }
-

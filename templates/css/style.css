@@ -1,700 +1,308 @@
+/* ================================
+   BASE / TIPOGRAFIA / BODY
+================================ */
+
+/* Configuração geral do body: fonte, cor, espaçamento, imagem de fundo com overlay */
 body {
-  font-family: "Montserrat", sans-serif;
-  color: #FDFDFD;       /* cor neutra clara */
-  line-height: 1.6;     /* melhora a leitura */
-  font-size: 18px;
-  background-image: url(../imagens/Background1.png);
-  background-color: rgba(0, 0, 0, 0.55);
-  background-blend-mode: overlay;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  margin: 0;
+  font-family: "Montserrat", sans-serif; /* Fonte principal do site */
+  color: #FDFDFD; /* Cor do texto padrão */
+  line-height: 1.6; /* Espaçamento entre linhas */
+  font-size: 18px; /* Tamanho base do texto */
+  margin: 0; /* Remove margin padrão do body */
+  background-image: url(../imagens/Background1.png); /* Imagem de fundo */
+  background-color: rgba(0,0,0,0.55); /* Cor de fundo com transparência */
+  background-blend-mode: overlay; /* Combina cor e imagem */
+  background-size: cover; /* Ajusta a imagem ao tamanho da tela */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
 }
+
+/* Container padrão: centraliza conteúdo e limita largura máxima */
 .container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1300px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding: 0 20px; /* Espaçamento interno horizontal */
 }
 
-/* === CONTEÚDO CENTRALIZADO === */
-main {
-max-width: 1200px;
-margin: 0 auto;
-padding: 60px 20px;
+/* ================================
+   TÍTULOS
+================================ */
+
+/* Reset de margin e peso de fonte para todos os títulos */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 20px 0; /* Margem inferior padrão */
+  font-weight: 600; /* Peso médio */
 }
-/* === FIM CONTEÚDO CENTRALIZADO === */
 
-/* ========== TÍTULOS ========= */
-
-/* Título principal (usado pouco) */
+/* H1: Título principal */
 h1 {
-  font-size: 44px;
-  font-weight: 700;
-  text-align: center;
-  letter-spacing: 1.5px;
-  color: #BDECB6; /* verde da paleta */
-  margin: 30px 0 40px 0;
-  text-shadow: 0 0 8px rgba(189,236,182,0.25);
+  font-size: 44px; /* Tamanho grande */
+  font-weight: 700; /* Peso negrito */
+  text-align: center; /* Centraliza */
+  letter-spacing: 1.5px; /* Espaçamento entre letras */
+  color: #BDECB6; /* Cor do título */
+  margin: 30px 0 40px; /* Margem superior e inferior */
+  text-shadow: 0 0 8px rgba(189,236,182,0.25); /* Sombra suave */
 }
 
-/* Títulos de seção (os mais usados) */
+/* H2: Títulos secundários de seção */
 h2 {
   font-size: 32px;
-  font-weight: 700;
   text-align: center;
   color: #BDECB6;
-  text-transform: uppercase;
+  text-transform: uppercase; /* Letras maiúsculas */
   letter-spacing: 1.5px;
-
-  /* underline elegante */
-  border-bottom: 2px solid #BDECB6;
-  display: inline-block;
-
-  padding-bottom: 8px;
-  margin-bottom: 40px;
-
-  /* brilho premium */
+  border-bottom: 2px solid #BDECB6; /* Linha inferior */
+  display: inline-block; /* Para que a borda fique no tamanho do texto */
+  padding-bottom: 8px; /* Espaço entre texto e borda */
+  margin-bottom: 40px; /* Espaço inferior */
   text-shadow: 0 0 6px rgba(189,236,182,0.25);
 }
 
-/* Títulos menores (subtítulos) */
-h3 {
-  font-size: 26px;
-  font-weight: 600;
-  color: #6C3BA6; 
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
-}
+/* H3 a H6: títulos menores com cores e tamanhos específicos */
+h3 { font-size: 26px; color: #6C3BA6; letter-spacing: 0.5px; }
+h4 { font-size: 22px; color: #6C3BA6; }
+h5 { font-size: 18px; color: #6C3BA6; }
+h6 { font-size: 16px; color: #BDECB6; opacity: 0.8; }
 
-/* Subtítulos dentro de cards ou boxes */
-h4 {
-  font-size: 22px;
-  font-weight: 600;
-  color: #6C3BA6;
-  margin-bottom: 16px;
-}
+/* ================================
+   PARÁGRAFOS E TEXTOS
+================================ */
 
-/* Titulação pequena */
-h5 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #6C3BA6;
-  margin-bottom: 10px;
-}
-
-/* Elementos secundários */
-h6 {
-  font-size: 16px;
-  font-weight: 500;
-  color: #BDECB6;
-  opacity: 0.8;
-  margin-bottom: 8px;
-}
-
-/* ------ PARÁGRAFOS E TEXTOS ------ */
-
+/* Parágrafos padrão */
 p {
-  font-size: 18px;
-  color: #FDFDFD;
-  line-height: 1.7;
-  margin-bottom: 20px;
+  font-size: 18px; /* Tamanho do texto */
+  font-weight: 400; /* Peso normal */
+  line-height: 1.7; /* Espaçamento entre linhas */
+  margin-bottom: 20px; /* Espaço inferior */
 }
 
-/* Ajuste fino para p logo após h2 */
-h2 + p {
-  margin-top: 12px;
-}
+/* Espaçamento específico para parágrafo logo após h2 */
+h2 + p { margin-top: 12px; }
 
-/* Texto pequeno (avisos, descrições curtas) */
-.small-text {
-  font-size: 15px;
-  opacity: 0.8;
-  line-height: 1.5;
-}
+/* Texto menor */
+.small-text { font-size: 15px; line-height: 1.5; opacity: 0.8; }
 
-/* ------ LINKS E AÇÕES --------- */
+/* ================================
+   LINKS E BOTÕES
+================================ */
 
-a {
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-/* Links padrão */
-a:not(.btn-contato) {
-  color: #BDECB6;
-}
-
-a:not(.btn-contato):hover {
-  color: #6C3BA6;
-}
-
-/* === FIM TÍTULOS === */
-
-/* === TEXTOS === */
-p {
-font-size: 18px;
-font-weight: 400;
-}
-/* === FIM TEXTOS === */
-
-/* === LINKS E BOTÕES === */
+/* Estilo padrão de links e botões */
 a, button {
-font-size: 16px;
-font-weight: 600;
-text-decoration: none;
-color: #BDECB6;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s; /* Transição suave ao passar mouse */
+  color: #BDECB6; /* Cor padrão */
 }
 
+/* Hover em links (não botão) */
+a:not(.btn-contato):hover { color: #6C3BA6; }
+
+/* Botão customizado */
 .btn-primary-custom {
   background-color: #6C3BA6;
   color: #FDFDFD;
   border-radius: 8px;
   padding: 10px 20px;
   border: none;
-  transition: .3s;
 }
 
+/* Hover do botão customizado */
 .btn-primary-custom:hover {
   background-color: #BDECB6;
   color: #1A1A1A;
 }
 
-/* === FIM LINKS E BOTÕES === */
-
 /* ================================
- INICIO - NAV
+   NAVBAR
 ================================ */
+
+/* Estilo geral da barra de navegação */
 .navbar {
-backdrop-filter: blur(14px);
-background: rgba(0, 0, 0, 0.25) !important;
-border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px); /* Efeito blur */
+  background: rgba(0,0,0,0.25) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+/* Links da navbar */
 .navbar .nav-link {
-position: relative;
-color: #E9F7EF !important;
-padding: 10px 16px !important;
-font-weight: 500;
-letter-spacing: 0.5px;
-transition: color 0.3s;
-
+  position: relative;
+  color: #E9F7EF !important;
+  padding: 10px 16px !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-.navbar .nav-link:hover {
-color: #BDECB6 !important;
-}
+/* Hover nos links */
+.navbar .nav-link:hover { color: #BDECB6 !important; }
 
+/* Linha animada abaixo do link */
 .navbar .nav-link::after {
-content: "";
-position: absolute;
-left: 50%;
-bottom: -4px;
-width: 0%;
-height: 2px;
-background: #BDECB6;
-border-radius: 10px;
-transition: 0.3s ease;
-transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #BDECB6;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+  opacity: 0.6;
 }
 
-.navbar .nav-link:hover::after {
-width: 90%;
-opacity: 1;
-}
-.navbar .nav-link::after {
-opacity: .6;
-}
-/*-- FORMATAÇÃO PARA JAVASCRIPT --*/
+/* Hover da linha animada */
+.navbar .nav-link:hover::after { width: 90%; opacity: 1; }
+
+/* Navbar quando scrolled */
 .nav-solid {
   background: rgba(0,0,0,0.82) !important;
   backdrop-filter: blur(12px);
-/*-- FIM - FORMATAÇÃO PARA JAVASCRIPT --*/
 }
-/* ================================
- FIM - NAV
-================================ */
 
 /* ================================
- INICIO - HOME
+   CARROSSEIS
 ================================ */
 
-/* === INICIO CARROSSEL PRINCIPAL === */
+/* Container do carrossel */
+.carousel-container { max-width: 1200px; margin: auto; }
 
+/* Todas as imagens do carrossel */
+.carousel-img { border-radius: 20px; transition: 0.4s ease-in-out; }
 
-.carousel-container {
-  max-width: 900px;
+/* Imagem principal do carrossel */
+.main-img { width: 650px; transform: scale(1); filter: blur(0); }
+
+/* Imagens laterais do carrossel */
+.blur-img { width: 250px; transform: scale(0.9); filter: blur(4px); opacity: 1; }
+
+/* Depoimentos - carrossel menor */
+#carouselDepoimentos {
+  width: 100%;
+  max-width: 560px;
+  margin: 40px auto;
+  overflow: visible !important;
+}
+
+/* Cartões de depoimento */
+.depo-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  text-align: center;
+  width: 90%;
   margin: auto;
 }
 
-.carousel-img {
-  border-radius: 20px;
-  transition: .4s ease-in-out;
-}
+/* Imagem dentro do depoimento */
+.depo-img { width: 100%; border-radius: 14px; object-fit: cover; box-shadow: 0 8px 18px rgba(0,0,0,0.16); }
 
-.main-img {
-  width: 450px;
-  filter: blur(0);
-  transform: scale(1);
-}
+/* Nome do cliente */
+.depo-nome { margin-top: 12px; font-size: 16px; font-weight: 600; color: #333; }
 
-.blur-img {
-  width: 250px;
-  filter: blur(4px);
-  transform: scale(0.9);
-  opacity: 1;
-}
-/* === FIM CARROSSEL PRINCIPAL === */
-
-/* === INICIO DIVISOR ENTRE SEÇÕES === */
-.section-divider {
-width: 80%;
-height: 2px;
-background: linear-gradient(90deg, transparent, #BDECB6, transparent);
-opacity: 0.25;
-margin: 40px auto;
-border-radius: 2px;
-}
-/* === FIM DIVISOR ENTRE SEÇÕES === */
-
-/* === INICIO SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
-.section-title {
-text-align: center;
-margin: 60px 0 40px;
-}
-.section-title p {
-font-size: 22px;
-font-weight: 500;
-opacity: .8;
-letter-spacing: 1px;
-}
-.section-title h2 {
-font-size: 38px;
-font-weight: 700;
-color: #BDECB6;
-text-transform: uppercase;
-letter-spacing: 1px;
-margin-bottom: 12px;
-opacity: .95;
-font-weight: 700;
-text-shadow: 0 0 8px rgba(189,236,182,0.22);
-}
-
-.section-title .line {
-width: 50px;
-height: 2px;
-opacity: .6;
-}
-/* === FIM SEÇÕES “TRABALHOS” E “DEPOIMENTOS” === */
-
-/* === INICIO CARDS === */
-.card {
-width: 100%;
-height: 100%; 
-max-width: 330px;
-background-color: #ffffff;
-color: #1A1A1A;
-border-radius: 18px;
-padding-bottom: 12px;
-transition: .3s ease;
-border: 1px solid rgba(255,255,255,0.07);
-box-shadow: 0 4px 12px rgba(0,0,0,0.10);
-transition: .25s ease;
-}
-
-.card:hover {
-transform: translateY(-4px);
-box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-}
-
-.card h5 {
-color: #6C3BA6;
-font-weight: 600;
-}
-.card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  display: block;
-}
-/* === FIM CARDS === */
-
-/* === INICIO CARROSSEL DEPOIMENTOS === */
-
-#carouselDepoimentos {
-width: 100%;
-max-width: 560px;
-margin: 40px auto;
-overflow: visible !important;
-}
-
-.depo-card {
-background: #fff;
-padding: 18px;
-border-radius: 18px;
-box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-text-align: center;
-width: 90%;
-margin: auto;
-}
-
-.depo-img {
-width: 100%;
-border-radius: 14px;
-object-fit: cover;
-box-shadow: 0 8px 18px rgba(0,0,0,0.16);
-}
-
-.depo-nome {
-margin-top: 12px;
-font-size: 16px;
-font-weight: 600;
-color: #333;
-}
-
-#carouselDepoimentos .carousel-control-prev {
-left: -55px;
-}
-
-#carouselDepoimentos .carousel-control-next {
-right: -55px;
-}
-.carousel-indicators button {
-width: 10px;
-height: 10px;
-border-radius: 50%;
-background-color: rgba(0,0,0,0.2) !important;
-transition: .3s ease;
-}
-
-.carousel-indicators .active {
-background-color: #7b1fd1 !important;
-width: 26px;
-border-radius: 40px;
-}
-#carouselDepoimentos .carousel-control-prev,
-#carouselDepoimentos .carousel-control-next {
-width: 60px;
-}
+/* Setas dos carrosseis */
 #carouselDepoimentos .carousel-control-prev,
 #carouselDepoimentos .carousel-control-next,
-#multiCarousel .carousel-control-prev,
-#multiCarousel .carousel-control-next {
-  position: absolute;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 10;
-  width: 60px !important;   /* mesmo tamanho do depoimentos */
-  height: 60px !important;
+#multiCarousel .carousel-control-next,
+#multiCarousel .carousel-control-prev {
+  width: 60px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 !important;
+  z-index: 10;
 }
+
+/* Ícones das setas */
 #carouselDepoimentos .carousel-control-prev-icon,
 #carouselDepoimentos .carousel-control-next-icon,
 #multiCarousel .carousel-control-prev-icon,
-#multiCarousel .carousel-control-next-icon  {
-background-color: rgba(255, 255, 255, 0.7);
-border-radius: 50%;
-padding: 18px;
-backdrop-filter: blur(5px);
-box-shadow: 0 0 15px rgba(0,0,0,0.25);
-transition: .25s ease-in-out;
+#multiCarousel .carousel-control-next-icon {
   width: 40px;
   height: 40px;
+  padding: 18px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.25);
+  transition: 0.25s ease-in-out;
 }
 
+/* Hover nas setas */
 #carouselDepoimentos .carousel-control-prev-icon:hover,
 #carouselDepoimentos .carousel-control-next-icon:hover,
-#multiCarousel .carousel-control-prev-icon:hover,
-#multiCarousel .carousel-control-next-icon:hover {
-background-color: #7b1fd1;
-transform: scale(1.12);
-}
-/* === FIM CARROSSEL DEPOIMENTOS === */
-
-/* === INICIO FOOTER === */
-footer {
-background-color: #0f0f0f;
-border-top: 1px solid rgba(189, 236, 182, 0.2);
-color: #BDECB6;
-padding: 40px 30px;
-display: flex;
-flex-direction: column;  
-align-items: center;        
-text-align: center;         
-gap: 20px;                  
+#multiCarousel .carousel-control-next-icon:hover,
+#multiCarousel .carousel-control-prev-icon:hover {
+  transform: scale(1.12);
+  background-color: #7b1fd1;
 }
 
-footer h1 {
-margin-top: 0;
-font-size: 20px;
-margin-bottom: 10px;
-}
-
-footer p {
-font-size: 14px;
-margin-bottom: 5px;
-}
-
-footer img {
-width: 100px;
-height: auto;
-}
-
-.footerDescricao {
-flex: 1;
-min-width: 200px;
-}
-.social{
-display: flex;
-gap: 15px;
-justify-content: center;
-}
-.social a img {
-width: 34px;
-transition: .3s ease;
-opacity: .85;
-}
-
-.social a img:hover {
-transform: scale(1.15);
-opacity: 1;
-}
-
-.footer-icon {
-  color: #BDECB6;     /* cor oficial */
-  font-size: 32px;    /* tamanho do ícone */
-  opacity: 0.8;       /* aparência mais suave */
-  transition: 0.3s;
-}
-
-.footer-icon:hover {
-  opacity: 1;
-  transform: scale(1.2);
-  color: #ffffff;     /* cor clara no hover */
-}
-/* === FIM FOOTER === */
-
-
-/* === INICIO RESPONSIVIDADE === */
-
-@media (max-width: 768px) {
-.card {
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 10px;
-gap: 12px;
-max-width: 100%;
-}
-
-.card img {
-width: 40%;
-height: auto;
-object-fit: cover;
-border-radius: 10px;
-}
-
-.card-body {
-padding: 0;
-}
-.card-title {
-font-size: 1.1rem;
-margin-bottom: 5px;
-text-align: center;
-}
-
-.card-text {
-font-size: 0.9rem;
-line-height: 1.3;
-}
-#apresentacao h2 {
-text-align: center;
-font-size: 28px;
-margin-top: 20px;
-margin-bottom: 20px; 
-}
-
-#apresentacao p {
-text-align: center;
-font-size: 16px;
-}
-
-#apresentacao .row {
-text-align: center; 
-align-items: flex-start !important; 
-}
-#carouselDepoimentos .carousel-control-prev {
-left: -25px; 
-}
-
-#carouselDepoimentos .carousel-control-next {
-right: -25px; 
-}
-.section-title p {
-  font-size: 24px;
-}
-.section-title .line {
-  width: 60px;
-}
-#carouselExampleIndicators {
-  height: 400px;
-}
-
-h1 { 
-  font-size: 36px;
-}
-h2 {
-  font-size: 28px; 
-}
-
-.Trabalhos, .Depoimentos {
-  font-size: 26px;
-  height: 100px;
-}
-}
-
-@media (max-width: 600px) {
-h1 { 
-  font-size: 32px; 
-}
-h2, .Trabalhos, .Depoimentos { 
-  font-size: 24px; 
-}
-p, a, button { 
-  font-size: 16px; 
-}
-footer {
-  flex-direction: column;
-  padding: 20px;
-}
-
-.card {
-  margin: 10px auto;
-}
-footer h1 { 
-  font-size: 22px; 
-}
-footer p { 
-  font-size: 16px; 
-}
-.social { 
-  margin-top: 15px; 
-}
-#carouselExampleIndicators {
-  height: 280px;
-}
-.Trabalhos, .Depoimentos {
-  height: 90px;
-}
-
-/* melhora na responsividade dos ícones */
-.social-icons {
-    gap: 20px;
-    margin-bottom: 20px;
-  }
-.social-icon {
-    font-size: 32px;
-  }
-}
-
-/* TIPOGRAFIA RESPONSIVA */
-
-@media (max-width: 768px) {
-  h1 { font-size: 36px; }
-  h2 { font-size: 28px; margin-bottom: 30px; margin-top: 30px; }
-  h3 { font-size: 24px; }
-  h4 { font-size: 20px; }
-  p  { font-size: 16px; }
-}
-
-@media (max-width: 480px) {
-  h1 { font-size: 32px; }
-  h2 { font-size: 12px; padding-bottom: 6px;padding-top: 10px; }
-  h3 { font-size: 22px; }
-  p  { font-size: 15px; }
-}
-/* === FIM RESPONSIVIDADE === */
+/* Ajuste de posição das setas do carrossel de depoimentos */
+#carouselDepoimentos .carousel-control-prev { left: -30px; }
+#carouselDepoimentos .carousel-control-next { right: -30px; }
 
 /* ================================
- FIM - HOME
+   CARDS
 ================================ */
 
-/* -------- PERSONALIZAÇÃO PAG QUEM SOU ---------- */
-
-/* SEÇÃO QUEM SOU */
-#quemsou {
-  margin-top: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
+/* Cartão padrão */
+.card {
+  width: 100%;
+  max-width: 330px;
+  background: #fff;
+  color: #1A1A1A;
+  border-radius: 18px;
+  padding-bottom: 12px;
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.25s ease;
 }
 
-#quemsou img{
-  border-radius: 05px;
+/* Hover nos cartões */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
 
-/* SEÇÃO REDES(CONTATOS) */
-#redes {
-  margin-top: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
+/* Imagem do cartão */
+.card img { width: 100%; height: auto; object-fit: cover; border-radius: 15px 15px 0 0; display: block; }
+
+/* Título do cartão */
+.card h5 { color: #6C3BA6; }
+
+/* ================================
+   FOOTER
+================================ */
+
+/* Footer geral */
+footer {
+  background: #0f0f0f;
+  border-top: 1px solid rgba(189,236,182,0.2);
+  color: #BDECB6;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
 }
 
-#redes h2 {
-  width: auto !important;              /* impede que ocupe 100%, o grid não estica o <h2> - !important vence as regras globais */
-  display: inline-block !important;    /* permite que a linha seja só no texto */
-  border-bottom: 2px solid #BDECB6 !important; /* reaplica o traço no tamanho certo */
-  padding-bottom: 6px;
-  margin: 0 auto 20px auto;            /* centraliza e ajusta */
-  text-shadow: 0 0 6px rgba(189,236,182,0.25); /* efeito brilhinho */
-}
+/* Footer: título e parágrafos */
+footer h1 { font-size: 20px; margin-bottom: 10px; }
+footer p { font-size: 14px; margin-bottom: 5px; }
+footer img { width: 100px; height: auto; }
 
-#redes .contato-subtitulo {
-  margin-top: 25px;
-  margin-bottom: 20px;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-  opacity: 0.9;
-}
+/* Redes sociais */
+.social { display: flex; gap: 15px; justify-content: center; }
+.social a { font-size: 34px; opacity: 0.85; transition: 0.3s; }
+.social a:hover { transform: scale(1.15); opacity: 1; }
 
-/* Ícone padrão */
-.social-icon {
-  color: #FDFDFD;      /* cor neutra clara */
-  transition: 0.3s;
-}
-
-/* Efeito de hover */
-.social-icon:hover {
-  color: #BDECB6;      /* verde oficial */
-  transform: scale(1.2);
-}
-
-/* Garantir alinhamento */
-.social-icons i {
-  display: inline-block;
-}
-
-/* Subtítulo abaixo do h2 */
-.contato-subtitulo {
-  color: #FDFDFD;
-  font-size: 18px;
-  opacity: .9;
-  margin-top: -15px;
-}
-
-/* Botões */
-
-/* Estilo base de todos os botões */
+/* ================================
+   BOTÕES DE CONTATO
+================================ */
 .btn-contato {
   display: inline-block;
   width: 200px;
@@ -702,149 +310,78 @@ footer p {
   font-weight: 600;
   border-radius: 10px;
   text-decoration: none;
-  transition: .3s;
+  transition: 0.3s;
 }
+.social-icon a:hover{ transform: scale(1.35);opacity: 1;}
+.btn-whatsapp { background: #BDECB6; color: #1A1A1A; }
+.btn-whatsapp:hover { background: #6C3BA6; color: #FDFDFD; }
 
-/* Botão WhatsApp (verde) */
-.btn-whatsapp {
-  background-color: #BDECB6;     /* verde oficial */
-  color: #1A1A1A;
-}
-
-.btn-whatsapp:hover {
-  background-color: #6C3BA6;     /* roxo */
-  color: #FDFDFD;
-}
-
-/* Botão Ligar (roxo) */
-.btn-ligar {
-  background-color: #6C3BA6;     /* roxo contraste */
-  color: #FDFDFD;
-}
-
-.btn-ligar:hover {
-  background-color: #BDECB6;     /* verde */
-  color: #1A1A1A;
-}
-
-#localizacao {
-padding: 50px;
-color: #FDFDFD;
-text-align: center;
-background: rgba(255, 255, 255, 0.05);
-border-radius: 20px;
-backdrop-filter: blur(4px);
-}
-/* ================================
- INICIO - MASSOTERAPIA
-================================ */
-
-/* INICIO APRESENTAÇÃO */
-.h2Servicos{
-text-align: center;
-}
-#apresentacao .container{
-background: rgba(255,255,255,0.06);
-padding: 40px;
-border-radius: 20px;
-backdrop-filter: blur(6px);
-margin-top: 40px;
-}
-.servicos h2, #apresentacao h2 {
-font-size: 38px;
-font-weight: 700;
-color: #BDECB6;
-text-transform: uppercase;
-letter-spacing: 1px;
-border-bottom: 2px solid #BDECB6;
-padding-bottom: 10px;
-margin-bottom: 40px;
-text-shadow: 0 0 8px rgba(189,236,182,0.22);
-}
-#apresentacao img{
-margin-bottom: 20px;
-}
-.card-link {
-text-decoration: none;
-color: inherit;
-display: block;
-}
-
-.servico-card {
-transition: transform .3s ease, box-shadow .3s ease;
-cursor: pointer;
-}
-
-.servico-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.servicos {
-  margin-top: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
-}
-
-/* FIM APRESENTAÇÃO */
+.btn-ligar { background: #6C3BA6; color: #FDFDFD; }
+.btn-ligar:hover { background: #BDECB6; color: #1A1A1A; }
 
 /* ================================
- FIM - MASSOTERAPIA
+   SEÇÕES PADRÃO
+================================ */
+.section-divider{
+  width: 80%; 
+  height: 2px; 
+  background: linear-gradient(90deg, transparent, #BDECB6, transparent); 
+  opacity: 0.25; 
+  margin: 40px auto; 
+  border-radius: 2px;
+}
+/* Seções principais do site: margem, padding, cor, fundo com blur */
+#meusTrabalhos,#apresentacao,#servicosMassoterapia,#quemsou,#redes,#localizacao,#servicos_enfermagem,#enfermagem,#depoimentos,#servicos_libras,#libras{
+  margin-top: 50px;
+  padding: 50px;
+  color: #FDFDFD;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* Centraliza títulos dentro das seções */
+.section-title { text-align: center; }
+
+/* Imagens dentro de qualquer section */
+section img { border-radius: 5px; }
+
+/* ================================
+   RESPONSIVIDADE
 ================================ */
 
-/*------------------------ PÁGINA LIBRAS ----------------------*/
+/* Ajustes para telas menores que 768px */
+@media (max-width: 768px) {
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; margin: 30px 0; padding-bottom: 8px; }
+  h3 { font-size: 24px; }
+  h4 { font-size: 20px; }
+  p  { font-size: 16px; }
 
-#libras {
-  margin-top: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
+  /* Ajuste dos cards para visualização horizontal */
+  .card { flex-direction: row; align-items: center; padding: 10px; gap: 12px; max-width: 100%; }
+  .card img { width: 40%; border-radius: 10px; }
+  .card-body { padding: 0; }
+  .card-title { font-size: 1.1rem; margin-bottom: 5px; text-align: center; }
+  .card-text { font-size: 0.9rem; line-height: 1.3; }
+
+  /* Carrossel: reduz imagem principal */
+  .main-img { width: 450px;}
 }
 
-#libras img{
-  border-radius: 05px;
+/* Ajustes para telas menores que 600px */
+@media (max-width: 600px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  p, a, button { font-size: 16px; }
+  footer { flex-direction: column; padding: 20px; }
+  .card { margin: 10px auto; }
 }
 
-#servicos_libras{
-  margin-top: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
-}
-.card-title {
-  color: #6C3BA6;
-}
-.card-text {
-  color: #6C3BA6;
-}
-
-/*------------------------ PÁGINA ENFERMAGEM ----------------------*/
-
-#servicos_enfermagem{
-  margin-top: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  backdrop-filter: blur(4px)
-}
-
-#enfermagem {
-  margin-top: 50px;
-  padding: 50px;
-  color: #FDFDFD;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  backdrop-filter: blur(4px);
-}
-
-#enfermagem img{
-  border-radius: 5px;
+/* Ajustes para telas menores que 480px */
+@media (max-width: 480px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 22px; padding: 6px 0; }
+  h3 { font-size: 22px; }
+  p { font-size: 15px; }
 }

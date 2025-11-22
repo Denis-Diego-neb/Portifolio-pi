@@ -3,7 +3,7 @@ body {
   color: #FDFDFD;       /* cor neutra clara */
   line-height: 1.6;     /* melhora a leitura */
   font-size: 18px;
-  background-image: url(../imagens/bgBody.svg);
+  background-image: url(../imagens/Background1.png);
   background-color: rgba(0, 0, 0, 0.55);
   background-blend-mode: overlay;
   background-size: cover;
@@ -249,7 +249,7 @@ opacity: .6;
 /* === INICIO DIVISOR ENTRE SEÇÕES === */
 .section-divider {
 width: 80%;
-height: 1px;
+height: 2px;
 background: linear-gradient(90deg, transparent, #BDECB6, transparent);
 opacity: 0.25;
 margin: 40px auto;
@@ -429,6 +429,7 @@ gap: 20px;
 }
 
 footer h1 {
+margin-top: 0;
 font-size: 20px;
 margin-bottom: 10px;
 }
@@ -439,7 +440,7 @@ margin-bottom: 5px;
 }
 
 footer img {
-width: 90px;
+width: 100px;
 height: auto;
 }
 
@@ -626,22 +627,22 @@ footer p {
 
 /* SEÇÃO QUEM SOU */
 #quemsou {
-margin: 50px;
-padding: 50px;
-color: #FDFDFD;
-background: rgba(255, 255, 255, 0.05);
-border-radius: 20px;
-backdrop-filter: blur(4px);
+  margin-top: 50px;
+  padding: 50px;
+  color: #FDFDFD;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
 }
 
 /* SEÇÃO REDES(CONTATOS) */
 #redes {
-margin: 50px;
-padding: 50px;
-color: #FDFDFD;
-background: rgba(255, 255, 255, 0.05);
-border-radius: 20px;
-backdrop-filter: blur(4px);
+  margin-top: 50px;
+  padding: 50px;
+  color: #FDFDFD;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
 }
 
 #redes h2 {
@@ -722,7 +723,6 @@ backdrop-filter: blur(4px);
 }
 
 #localizacao {
-margin: 50px;
 padding: 50px;
 color: #FDFDFD;
 text-align: center;
@@ -774,6 +774,16 @@ cursor: pointer;
 transform: translateY(-5px);
 box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+
+.servicos {
+  margin-top: 50px;
+  padding: 50px;
+  color: #FDFDFD;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
 /* FIM APRESENTAÇÃO */
 
 /* ================================
@@ -783,7 +793,7 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 /*------------------------ PÁGINA LIBRAS ----------------------*/
 
 #libras {
-  margin: 50px;
+  margin-top: 50px;
   padding: 50px;
   color: #FDFDFD;
   background: rgba(255, 255, 255, 0.05);
@@ -792,7 +802,7 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 #servicos_libras{
-  margin: 50px;
+  margin-top: 50px;
   padding: 50px;
   color: #FDFDFD;
   background: rgba(255, 255, 255, 0.05);
@@ -804,4 +814,24 @@ box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 .card-text {
   color: #6C3BA6;
+}
+
+/*------------------------ PÁGINA ENFERMAGEM ----------------------*/
+
+#servicos_enfermagem{
+  margin-top: 50px;
+  padding: 50px;
+  color: #FDFDFD;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(4px)
+}
+
+#enfermagem {
+  margin-top: 50px;
+  padding: 50px;
+  color: #FDFDFD;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
 }

@@ -28,7 +28,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="imagens/logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <img src="./imagens/logoclaro.png" alt="Logo do site em cinza claro." width="70" class="d-inline-block align-text-top">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,12 +59,12 @@
   <!-- Incio sobre de enfermagem -->
   <section class="container">
     <section class="Sobre">
-      <section id="quemsou">
+      <section id="enfermagem">
         <div class="container">
           <div class="row d-flex justify-content-center align-items-center">
 
             <div class="col-md-6 d-flex justify-content-center">
-              <img src="./imagens/quemsou/imagemexemplo.jpeg" alt="Fabiana Jora" width="300px"
+              <img src="./imagens/enfermagem/introenfermagem.jpg" alt="Equipamentos de enfermagem." width="300px"
                 class="img-fluid mx-auto">
             </div><!--Fim da col-md-6 IMAGEM-->
 
@@ -82,90 +82,70 @@
       </section>
     </section>
   <!-- fim sobre de enfermagem -->
-   <div class="section-divider"></div>
+
+  <div class="section-divider"></div>
+
   <!-- Inicio servicos -->
-  <section>
-      <div class="section-title">
-        <h2>Serviços</h2>
-        <div class="line"></div>
-      </div>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <div class="card">
-            <img src="imagens/quemsou/imagemexemplo.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Massoterapia</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <a href="" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="imagens/quemsou/imagemexemplo.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Enfermagem</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <a href="" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="imagens/quemsou/imagemexemplo.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Libras</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content.</p>
-              <a href="" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="imagens/quemsou/imagemexemplo.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Libras</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content.</p>
-              <a href="" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="imagens/quemsou/imagemexemplo.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Libras</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content.</p>
-              <a href="" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="imagens/quemsou/imagemexemplo.jpeg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Libras</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                content.</p>
-              <a href="" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  <!-- Fim servicos -->
+    <section id="servicos_enfermagem">
+      <div class="container">
+        <div class="row justify-content-center align-items-center g-4">
+          <!--g-4 é o gap, ou seja, o espaçamento entre as colunas e linhas dentro da row-->
+
+          <div class="col-md-4 mx-auto"><!--col-md-4 dá espaço pra respiração e organização dos cards-->
+
+            <div class="card h-100 position-relative"> <!--h-100 (faz os dois cards ficarem com a mesma altura, mesmo que um tenha mais texto que o outro
+e garanti que o stretched-link tenha área total pra clicar)-->
+              <!--position-relative (O stretched-link precisa de um pai com posição (relative/absolute) para conseguir se esticar.)-->
+
+              <img src="./imagens/enfermagem/cardhomecare.jpg" class="card-img-top"
+                alt="Imagem ilustrativa do serviço de interpretação em Libras">
+
+              <div class="card-body">
+                <h5 class="card-title">Homecare</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content.</p>
+                <a href="https://wa.me/5519997996102?text=Ol%C3%A1%2C%20Fabiana%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20homecare%21"
+                  class="stretched-link"></a><!--classe especial chamada stretched-link do Bootstrap -> faz o link “abranger” todo o card.-->
+                <!--O formato correto é sempre: https://wa.me/55DDDNUMERO?text=MENSAGEM - IMPORTANTE: Cada espaço e acentuação precisa ser codificado (URL encoded), senão o link quebra. -->
+                <!--Espaço → %20 | Vírgula → %2C | Acentos → são aceitos no WhatsApp (ele já converte) | ! → %21-->
+              </div><!--Fim div card-body-->
+
+            </div><!--Fim div card-->
+
+          </div><!--Fim div col-md-4-->
+
+          <div class="col-md-4 mx-auto"><!--col-md-4 dá espaço pra respiração e organização dos cards-->
+
+            <div class="card h-100 position-relative">
+              <img src="./imagens/enfermagem/cardcursocuidador.jpg" class="card-img-top"
+                alt="Imagem ilustrativa do Curso de Idosos">
+
+              <div class="card-body">
+                <h5 class="card-title">Curso de Cuidador de Idosos</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                  content.</p>
+                <a href="https://wa.me/5519997996102?text=Ol%C3%A1%2C%20Fabiana%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20curso%20de%20cuidador%20de%20idosos%21"
+                  class="stretched-link"></a><!--classe especial chamada stretched-link do Bootstrap -> faz o link “abranger” todo o card.-->
+                <!--O formato correto é sempre: https://wa.me/55DDDNUMERO?text=MENSAGEM - IMPORTANTE: Cada espaço e acentuação precisa ser codificado (URL encoded), senão o link quebra. -->
+                <!--Espaço → %20 | Vírgula → %2C | Acentos → são aceitos no WhatsApp (ele já converte) | ! → %21-->
+              </div>
+
+            </div><!--Fim div card-->
+
+          </div><!--Fim div col-md-4-->
+
+        </div><!--Fim da row-->
+      </div><!--Fim do cantainer-->
+    </section><!--Fim da seção-->
+
    <div class="section-divider"></div>
   </section>
-  <!-- Incio do footer -->
+   <!-- Incio do footer -->
   <footer>
-    <img src="./imagens/logo.svg" alt="Logo do site">
-
+    
     <div class="footerDescricao">
+      <img src="./imagens/logoverde.png" alt="Logo do site na cor verde.">
+
       <h1>ESPAÇO FABIANA JORA</h1>
       <p>Rua Conchal, 57 - Jardim Rollo. Araras- SP</p>
       <p>(19) 99799-6102</p>

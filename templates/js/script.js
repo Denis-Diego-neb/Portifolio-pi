@@ -18,9 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // LISTA DE IMAGENS DO CARROSSEL
   // Aqui você só adiciona ou remove imagens conforme quiser
   const imagens = [
-    "imagens/quemsou/imagemexemplo.jpeg",
-    "imagens/quemsou/imagemteste.jpg",
-    "imagens/quemsou/imagemexemplo.jpeg"
+    "imagens/home/carrossel.jpg",
+    "imagens/home/carrossel1.png",
+    "imagens/home/carrossel2.jpg",
+    "imagens/home/carrossel3.jpg",
+    "imagens/home/carrossel4.jpg"
   ];
 
   // Seleciona o contêiner onde os slides do carrossel serão criados

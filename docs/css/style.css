@@ -188,17 +188,35 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 ================================ */
 
 /* Container do carrossel */
-.carousel-container { max-width: 1200px; margin: auto; }
+.carousel-container {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
 
 /* Todas as imagens do carrossel */
-.carousel-img { border-radius: 20px; transition: 0.4s ease-in-out; }
+.carousel-container img {
+  display: block;
+  height: auto;
+}
 
-/* Imagem principal do carrossel */
-.main-img { width: 650px; transform: scale(1); filter: blur(0); }
+/* Imagem principal */
+.carousel-container img.main-img {
+  width: 650px;
+  max-width: 90vw;   /* nunca maior que 90% da tela */
+  transform: scale(1);
+  filter: blur(0);
+}
 
-/* Imagens laterais do carrossel */
-.blur-img { width: 250px; transform: scale(0.9); filter: blur(4px); opacity: 1; }
-
+/* Imagens laterais */
+.carousel-container img.blur-img {
+  width: 250px;
+  max-width: 40vw;  /* nunca maior que 40% da tela */
+  transform: scale(0.9);
+  filter: blur(4px);
+  opacity: 1;
+}
 /* Depoimentos - carrossel menor */
 #carouselDepoimentos {
   width: 100%;
@@ -223,7 +241,12 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 
 /* Nome do cliente */
 .depo-nome { margin-top: 12px; font-size: 16px; font-weight: 600; color: #333; }
-
+#multiCarousel {
+  max-width: 1200px;   /* Largura máxima */
+  margin: auto;         /* Centraliza */
+  overflow: hidden;     /* Evita scroll lateral */
+  position: relative;   /* Necessário para os botões */
+}
 /* Setas dos carrosseis */
 #carouselDepoimentos .carousel-control-prev,
 #carouselDepoimentos .carousel-control-next,
@@ -388,9 +411,8 @@ section img { border-radius: 5px; }
   .card-text { font-size: 0.9rem; line-height: 1.3; }
 
   /* Carrossel: reduz imagem principal */
-  .main-img { width: 300px;}
-  .blur-img {
-    filter: blur(2px);transform: scale(0.95);}
+  .carousel-container img.main-img {width: 300px;max-width: 80vw; /* ocupa no máximo 80% da tela */}
+  .carousel-container img.blur-img {width: 150px;max-width: 35vw; /* ocupa no máximo 35% da tela */filter: blur(2px);transform: scale(0.95);}
 }
 
 /* Ajustes para telas menores que 600px */
@@ -408,4 +430,6 @@ section img { border-radius: 5px; }
   h2 { font-size: 22px; padding: 6px 0; }
   h3 { font-size: 22px; }
   p { font-size: 15px; }
+  .carousel-container img.main-img {width: 300px;max-width: 90vw;}
+  .carousel-container img.blur-img {width: 120px;max-width: 40vw; }
 }

@@ -1,20 +1,42 @@
+/* Corrige bug do background em celulares */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 /* ================================
    BASE / TIPOGRAFIA / BODY
 ================================ */
 
 /* Configuração geral do body: fonte, cor, espaçamento, imagem de fundo com overlay */
-body {
+
+body{
+  position: relative;
+  overflow-x: hidden; /* Evita que o site role lateralmente por erro. */
   font-family: "Montserrat", sans-serif; /* Fonte principal do site */
   color: #FDFDFD; /* Cor do texto padrão */
   line-height: 1.6; /* Espaçamento entre linhas */
   font-size: 18px; /* Tamanho base do texto */
   margin: 0; /* Remove margin padrão do body */
+}
+/* Usamos ::before para aplicar a imagem de fundo com overlay sem afetar o conteúdo
+   e para evitar bugs de background fixo em celulares, garantindo desempenho e estabilidade. */
+
+body::before {
+  content: "";   /* Cria um pseudo-elemento para servir de fundo */
+  position: fixed;  /* Fica fixo na tela mesmo ao rolar */
+  top: 0; /* Gruda no topo */
+  left: 0;  /* Gruda na esquerda */
+  width: 100%;  /* Cobre toda a largura da tela */
+  height: 100vh; /* Cobre toda a altura da tela */
   background-image: url(../imagens/Background1.png); /* Imagem de fundo */
   background-color: rgba(0,0,0,0.55); /* Cor de fundo com transparência */
   background-blend-mode: overlay; /* Combina cor e imagem */
   background-size: cover; /* Ajusta a imagem ao tamanho da tela */
   background-position: center; /* Centraliza a imagem */
-  background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+  background-repeat: no-repeat; /* Não deixa repetir a imagem */
+  pointer-events: none; /* evita interferencia */
+  z-index: -1;
 }
 
 /* Container padrão: centraliza conteúdo e limita largura máxima */
@@ -157,7 +179,7 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 
 /* Navbar quando scrolled */
 .nav-solid {
-  background: rgba(0,0,0,0.82) !important;
+  background: rgba(0,0,0,0.88) !important;
   backdrop-filter: blur(12px);
 }
 
@@ -352,7 +374,6 @@ section img { border-radius: 5px; }
 
 /* Ajustes para telas menores que 768px */
 @media (max-width: 768px) {
-  body{background-attachment: fixed; background-size: cover;}
   h1 { font-size: 36px; }
   h2 { font-size: 28px; margin: 30px 0; padding-bottom: 8px; }
   h3 { font-size: 24px; }
@@ -368,6 +389,8 @@ section img { border-radius: 5px; }
 
   /* Carrossel: reduz imagem principal */
   .main-img { width: 300px;}
+  .blur-img {
+    filter: blur(2px);transform: scale(0.95);}
 }
 
 /* Ajustes para telas menores que 600px */

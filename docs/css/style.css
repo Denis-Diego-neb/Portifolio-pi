@@ -302,8 +302,8 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 /* imagem se adapta - não corta demais e não faz o card 'pular' */
 #carouselDepoimentos .depo-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;   /* mostra a imagem inteira dentro do box */
+  height: auto;
+  object-fit: contain;   /* mostra a imagem inteira dentro do box */
   display: block;
 }
 

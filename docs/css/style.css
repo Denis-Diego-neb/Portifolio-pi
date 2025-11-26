@@ -265,10 +265,12 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
   margin: 40px auto;
 }
 /* cartão: altura fixa e layout previsível */
-#carouselDepoimentos .carousel-item{
+.formatacaoDepoimentosCard{
   background-color: white;
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  width: 400px;
+  margin: 0 auto;
 
 }
 #carouselDepoimentos .depo-card {

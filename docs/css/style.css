@@ -226,7 +226,7 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 }
 
 /* Indicadores (bolinhas) mais bonitos */
-.carousel-indicators button {
+#carouselExampleIndicators .carousel-indicators button {
   width: 14px !important;
   height: 14px !important;
   border-radius: 50%;

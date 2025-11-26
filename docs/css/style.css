@@ -186,37 +186,78 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 /* ================================
    CARROSSEIS
 ================================ */
-
-/* Container do carrossel */
-.carousel-container {
-  max-width: 1200px;
-  margin: auto;
+/* Container geral do carrossel */
+#carouselExampleIndicators {
+  border-radius: 20px;
   overflow: hidden;
-  position: relative;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  max-width: 1100px;
+  margin: 40px auto;
 }
 
-/* Todas as imagens do carrossel */
-.carousel-container img {
-  display: block;
-  height: auto;
+/* Deixa as imagens com tamanho bonito */
+#carouselExampleIndicators .carousel-item img {
+  height: 420px;
+  object-fit: cover;
+  filter: brightness(92%);
+  transition: 0.6s ease-in-out;
 }
 
-/* Imagem principal */
-.carousel-container img.main-img {
-  width: 650px;
-  max-width: 90vw;   /* nunca maior que 90% da tela */
-  transform: scale(1);
-  filter: blur(0);
+/* Efeito leve de zoom ao trocar slides */
+#carouselExampleIndicators .carousel-item.active img {
+  transform: scale(1.04);
 }
 
-/* Imagens laterais */
-.carousel-container img.blur-img {
-  width: 250px;
-  max-width: 40vw;  /* nunca maior que 40% da tela */
-  transform: scale(0.9);
-  filter: blur(4px);
-  opacity: 1;
+/* Overlay suave em cima das imagens */
+#carouselExampleIndicators .carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0.0.5)
+  );
+  pointer-events: none;
+  z-index: 10;
 }
+
+/* Indicadores (bolinhas) mais bonitos */
+.carousel-indicators button {
+  width: 14px !important;
+  height: 14px !important;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.6) !important;
+  transition: 0.3s;
+}
+
+.carousel-indicators .active {
+  background-color: #7b1fd1 !important;
+}
+
+/* Setas laterais customizadas */
+#carouselExampleIndicators .carousel-control-prev-icon,
+#carouselExampleIndicators .carousel-control-next-icon {
+  filter: invert(100%);
+  width: 40px;
+  height: 40px;
+  background-size: 70%;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  padding: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+#carouselExampleIndicators .carousel-control-prev-icon:hover,
+#carouselExampleIndicators .carousel-control-next-icon:hover {
+  background-color: #7b1fd1;
+  filter: invert(0%);
+}
+
+
 /* Depoimentos - carrossel menor */
 #carouselDepoimentos {
   width: 100%;
@@ -235,23 +276,24 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
   width: 90%;
   margin: auto;
 }
-
+.depo-img-container{
+  width: 100%;
+  height: 260px;      /* Altura fixa no PC */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;    /* Evita sobras */
+  border-radius: 14px;
+}
 /* Imagem dentro do depoimento */
-.depo-img { width: 100%; border-radius: 14px; object-fit: cover; box-shadow: 0 8px 18px rgba(0,0,0,0.16); }
+.depo-img { width: 100%; height: auto; border-radius: 14px; object-fit: contain; box-shadow: 0 8px 18px rgba(0,0,0,0.16); display: block;}
 
 /* Nome do cliente */
 .depo-nome { margin-top: 12px; font-size: 16px; font-weight: 600; color: #333; }
-#multiCarousel {
-  max-width: 1200px;   /* Largura máxima */
-  margin: auto;         /* Centraliza */
-  overflow: hidden;     /* Evita scroll lateral */
-  position: relative;   /* Necessário para os botões */
-}
+
 /* Setas dos carrosseis */
 #carouselDepoimentos .carousel-control-prev,
-#carouselDepoimentos .carousel-control-next,
-#multiCarousel .carousel-control-next,
-#multiCarousel .carousel-control-prev {
+#carouselDepoimentos .carousel-control-next{
   width: 60px;
   top: 50%;
   transform: translateY(-50%);
@@ -263,9 +305,7 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 
 /* Ícones das setas */
 #carouselDepoimentos .carousel-control-prev-icon,
-#carouselDepoimentos .carousel-control-next-icon,
-#multiCarousel .carousel-control-prev-icon,
-#multiCarousel .carousel-control-next-icon {
+#carouselDepoimentos .carousel-control-next-icon{
   width: 40px;
   height: 40px;
   padding: 18px;
@@ -278,9 +318,7 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 
 /* Hover nas setas */
 #carouselDepoimentos .carousel-control-prev-icon:hover,
-#carouselDepoimentos .carousel-control-next-icon:hover,
-#multiCarousel .carousel-control-next-icon:hover,
-#multiCarousel .carousel-control-prev-icon:hover {
+#carouselDepoimentos .carousel-control-next-icon:hover{
   transform: scale(1.12);
   background-color: #7b1fd1;
 }
@@ -304,6 +342,7 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
   border: 1px solid rgba(255,255,255,0.07);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: 0.25s ease;
+  
 }
 
 /* Hover nos cartões */
@@ -313,7 +352,7 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 }
 
 /* Imagem do cartão */
-.card img { width: 100%; height: auto; object-fit: cover; border-radius: 15px 15px 0 0; display: block; }
+.card img { width: 100%; height: auto; object-fit: contain; border-radius: 15px 15px 0 0; display: block; }
 
 /* Título do cartão */
 .card h5 { color: #6C3BA6; }
@@ -409,10 +448,7 @@ section img { border-radius: 5px; }
   .card-body { padding: 0; }
   .card-title { font-size: 1.1rem; margin-bottom: 5px; text-align: center; }
   .card-text { font-size: 0.9rem; line-height: 1.3; }
-
-  /* Carrossel: reduz imagem principal */
-  .carousel-container img.main-img {width: 300px;max-width: 80vw; /* ocupa no máximo 80% da tela */}
-  .carousel-container img.blur-img {width: 150px;max-width: 35vw; /* ocupa no máximo 35% da tela */filter: blur(2px);transform: scale(0.95);}
+  .depo-img-container{height: 180px;padding: 14px;}
 }
 
 /* Ajustes para telas menores que 600px */
@@ -430,6 +466,6 @@ section img { border-radius: 5px; }
   h2 { font-size: 22px; padding: 6px 0; }
   h3 { font-size: 22px; }
   p { font-size: 15px; }
-  .carousel-container img.main-img {width: 300px;max-width: 90vw;}
-  .carousel-container img.blur-img {width: 120px;max-width: 40vw; }
+  .depo-img-container{height: 150px;padding: 10px;width: 110%;
+margin-left: -5%;}
 }

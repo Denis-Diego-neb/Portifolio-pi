@@ -58,26 +58,50 @@
   </nav>
   <!-- Fim da barra de navegação -->
   <!-- Incio do carousel -->
-
-  <div class="carousel-container my-5">
-    <div id="multiCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-ps-pause="false"
-      data-ps-wrap="true">
-
-      <div class="carousel-inner" id="carousel-dynamic"></div>
-
-      <button aria-label="Voltar slide" class="carousel-control-prev" type="button" data-bs-target="#multiCarousel"
+  <section class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagens/home/carrossel1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/home/carrossel2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/home/carrossel3.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/home/carrossel4.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="imagens/home/carrossel.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
       </button>
-
-      <button aria-label="Avançar slide" class="carousel-control-next" type="button" data-bs-target="#multiCarousel"
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </div>
-  <!-- Fim do carousel -->
-  <section class="container">
+    <!-- Fim do carousel -->
+
     <div class="section-divider"></div>
     <!-- Incio dos cards -->
     <section id="meusTrabalhos">
@@ -92,7 +116,7 @@
               alt="Toalhas enroladas e velas sobre a mesa.">
             <div class="card-body">
               <h5 class="card-title">Massoterapia</h5>
-              <p class="card-text">Proporcione bem-estar e alivie tensões com técnicas especializadas de massoterapia.
+              <p class="card-text">Proporciona bem-estar e alivia tensões com técnicas especializadas de massoterapia.
               </p>
               <a href="massoterapia.html" class="stretched-link"></a>
             </div>
@@ -104,7 +128,7 @@
               alt="Enfermeiro medindo a pressão de paciente.">
             <div class="card-body">
               <h5 class="card-title">Enfermagem</h5>
-              <p class="card-text">Receba cuidado humanizado e seguro, no conforto do seu lar com serviço especializado
+              <p class="card-text">Receba cuidado humanizado e seguro, no conforto do seu lar, com serviço especializado
                 e
                 profissional.</p>
               <a href="enfermargem.html" class="stretched-link"></a>
@@ -139,8 +163,10 @@
           <!-- ITEM 1 -->
           <div class="carousel-item active">
             <div class="depo-card">
-              <img src="imagens/Imagens_Comentarios/comentario1.jfif" class="depo-img"
-                alt="Imagem com mensagem de feedback positivo sobre os trabalhos descritos no site.">
+              <div class="depo-img-container">
+                <img src="imagens/Imagens_Comentarios/comentario1.jfif" class="depo-img"
+                  alt="Imagem com mensagem de feedback positivo sobre os trabalhos descritos no site.">
+              </div>
               <p class="depo-nome">Cliente A</p>
             </div>
           </div>
@@ -148,8 +174,10 @@
           <!-- ITEM 2 -->
           <div class="carousel-item">
             <div class="depo-card">
-              <img src="imagens/Imagens_Comentarios/comentario2.jfif" class="depo-img"
-                alt="Imagem com mensagem de feedback positivo sobre os trabalhos descritos no site.">
+              <div class="depo-img-container">
+                <img src="imagens/Imagens_Comentarios/comentario2.jfif" class="depo-img"
+                  alt="Imagem com mensagem de feedback positivo sobre os trabalhos descritos no site.">
+              </div>
               <p class="depo-nome">Cliente B</p>
             </div>
           </div>
@@ -157,8 +185,10 @@
           <!-- ITEM 3 -->
           <div class="carousel-item">
             <div class="depo-card">
-              <img src="imagens/Imagens_Comentarios/comentario3.jfif" class="depo-img"
-                alt="Imagem com mensagem de feedback positivo sobre os trabalhos descritos no site.">
+              <div class="depo-img-container">
+                <img src="imagens/Imagens_Comentarios/comentario3.jfif" class="depo-img"
+                  alt="Imagem com mensagem de feedback positivo sobre os trabalhos descritos no site.">
+              </div>
               <p class="depo-nome">Cliente C</p>
             </div>
           </div>

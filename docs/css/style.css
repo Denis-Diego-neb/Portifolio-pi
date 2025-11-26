@@ -226,7 +226,7 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 }
 
 /* Indicadores (bolinhas) mais bonitos */
-#carouselExampleIndicators .carousel-indicators button {
+ .carousel-indicators button {
   width: 14px !important;
   height: 14px !important;
   border-radius: 50%;
@@ -287,7 +287,7 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
   border-radius: 14px;
 }
 /* Imagem dentro do depoimento */
-.depo-img { width: 100%; height: auto; border-radius: 14px; object-fit: contain; box-shadow: 0 8px 18px rgba(0,0,0,0.16); display: block;}
+.depo-img { width: 100%; height: 100%; border-radius: 14px; object-fit: contain; box-shadow: 0 8px 18px rgba(0,0,0,0.16); display: block;}
 
 /* Nome do cliente */
 .depo-nome { margin-top: 12px; font-size: 16px; font-weight: 600; color: #333; }

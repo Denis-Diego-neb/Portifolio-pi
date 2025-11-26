@@ -265,12 +265,14 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
   margin: 40px auto;
 }
 /* cartão: altura fixa e layout previsível */
-#carouselDepoimentos .depo-card {
-  background: #fff;
+#carouselDepoimentos .carousel-item{
+  background-color: white;
   border-radius: 18px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+
+}
+#carouselDepoimentos .depo-card {
   padding: 18px;
-  width: 90%;
   margin: 0 auto;
   height: 320px;
   display: flex;
@@ -290,6 +292,7 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
   overflow: hidden;
   border-radius: 14px;
   position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   background: transparent; /* caso queira um leve fundo, coloque rgba() aqui */
 }
 

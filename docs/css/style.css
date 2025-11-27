@@ -2,6 +2,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  scroll-padding-top: 70px; /* deslocamento por causa da navbar fixa */
+  scroll-behavior: smooth; /* rolagem suave */
 }
 
 /* ================================
@@ -117,9 +119,11 @@ a, button {
   transition: 0.3s; /* Transição suave ao passar mouse */
   color: #BDECB6; /* Cor padrão */
 }
-
+.social-quem-sou {
+  color: #fdfdfd;
+}
 /* Hover em links (não botão) */
-a:not(.btn-contato):hover { color: #6C3BA6; }
+a:not(.btn-contato):hover {color:#BDECB6;}
 
 /* Botão customizado */
 .btn-primary-custom {
@@ -134,6 +138,26 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 .btn-primary-custom:hover {
   background-color: #BDECB6;
   color: #1A1A1A;
+}
+/* Botao customizado dos Cards Serviços */
+
+.btn-primary-custom-cta {
+  background-color: #BDECB6;
+  color: black;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: none;
+  position: absolute;
+  bottom: 15px;          /* fixa no fundo */
+  left: 50%;             /* centraliza */
+  transform: translateX(-50%); /* ajusta centralização */
+  transition: 0.25s ease;
+  z-index: 5 !important;
+}
+.btn-primary-custom-cta:hover{
+  background-color: #6C3BA6;
+  color: white !important;
+  transform: translateX(-50%) scale(1.05);
 }
 
 /* ================================
@@ -186,6 +210,42 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 /* ================================
    CARROSSEIS
 ================================ */
+/* Section CTA fora do carrossel */
+.intro-before-carousel {
+  text-align: center;
+  margin: 40px auto 20px auto;
+}
+
+.intro-before-carousel h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #BDECB6;
+  margin: 0;
+  text-shadow: 0 0 6px rgba(189,236,182,0.5);
+}
+
+.cta-bar {
+  padding: 25px 20px;
+  margin: 20px auto 40px auto;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  border-left: 6px solid #6C3BA6; 
+  max-width: 900px;
+  border-radius: 8px;
+}
+.cta-bar-btn {
+  padding: 10px 22px;
+  color: #FFFFFF;
+  background-color: #6C3BA6; 
+  border-radius: 6px;
+}
+
+.cta-bar-btn:hover {
+  background-color: #BDECB6;
+  color: #1A1A1A !important;
+}
+
+
 /* Container geral do carrossel */
 #carouselExampleIndicators {
   border-radius: 20px;
@@ -216,16 +276,10 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.1),
-    rgba(0,0,0,0.0.5)
-  );
+  background: linear-gradient( to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0.0.5));
   pointer-events: none;
   z-index: 10;
 }
-
-/* Indicadores (bolinhas) mais bonitos */
  .carousel-indicators button {
   width: 14px !important;
   height: 14px !important;
@@ -296,10 +350,8 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
   border-radius: 14px;
   position: relative;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  background: transparent; /* caso queira um leve fundo, coloque rgba() aqui */
+  background: transparent;
 }
-
-/* imagem se adapta - não corta demais e não faz o card 'pular' */
 #carouselDepoimentos .depo-img {
   width: 100%;
   object-fit: contain;   /* mostra a imagem inteira dentro do box */
@@ -351,18 +403,21 @@ a:not(.btn-contato):hover { color: #6C3BA6; }
 
 /* Cartão padrão */
 .card {
+  position: relative;
   width: 100%;
   max-width: 330px;
   background: #fff;
   color: #1A1A1A;
   border-radius: 18px;
-  padding-bottom: 12px;
+  padding-bottom: 50px;
   border: 1px solid rgba(255,255,255,0.07);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: 0.25s ease;
-  
+  cursor: pointer;
 }
-
+.card a.stretched-link{
+  z-index: 0 !important;
+}
 /* Hover nos cartões */
 .card:hover {
   transform: translateY(-4px);
@@ -454,6 +509,7 @@ section img { border-radius: 5px; }
 
 /* Ajustes para telas menores que 768px */
 @media (max-width: 768px) {
+  #meusTrabalhos,#apresentacao,#servicosMassoterapia,#quemsou,#redes,#localizacao,#servicos_enfermagem,#enfermagem,#servicos_libras,#libras{padding: 30px;}
   h1 { font-size: 36px; }
   h2 { font-size: 28px; margin: 30px 0; padding-bottom: 8px; }
   h3 { font-size: 24px; }
@@ -461,7 +517,7 @@ section img { border-radius: 5px; }
   p  { font-size: 16px; }
 
   /* Ajuste dos cards para visualização horizontal */
-  .card { flex-direction: column; align-items: flex-start;text-align: center; padding: 10px; gap: 12px; max-width: 100%; }
+  .card { flex-direction: column; align-items: flex-start;text-align: center; padding: 10px; gap: 12px; max-width: 100%; padding-bottom: 80px !important;}
   .card img { width: 100%; border-radius: 10px; }
   .card-body { padding: 0; }
   .card-title { font-size: 1.1rem; margin-bottom: 5px; text-align: center; }
@@ -473,11 +529,12 @@ section img { border-radius: 5px; }
 
 /* Ajustes para telas menores que 600px */
 @media (max-width: 600px) {
+  #meusTrabalhos,#apresentacao,#servicosMassoterapia,#quemsou,#redes,#localizacao,#servicos_enfermagem,#enfermagem,#servicos_libras,#libras{padding: 25px;}
   h1 { font-size: 32px; }
   h2 { font-size: 24px; }
   p, a, button { font-size: 16px; }
   footer { flex-direction: column; padding: 20px; }
-  .card { margin: 10px auto; }
+  .card { padding-bottom: 90px !important; }
   .formatacaoDepoimentosCard{width: 320px;}
 
   
@@ -485,6 +542,7 @@ section img { border-radius: 5px; }
 
 /* Ajustes para telas menores que 480px */
 @media (max-width: 480px) {
+  #meusTrabalhos,#apresentacao,#servicosMassoterapia,#quemsou,#redes,#localizacao,#servicos_enfermagem,#enfermagem,#servicos_libras,#libras{padding: 20px;}
   h1 { font-size: 32px; }
   h2 { font-size: 22px; padding: 6px 0; }
   h3 { font-size: 22px; }
